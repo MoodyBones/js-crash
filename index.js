@@ -11,15 +11,16 @@
 // TICK a Customer can order Food
 // the Driver picks up the Food’s from the Restaurant and delivers it to the Customer
 
+////////
 class Restaurant {
-  constructor(name, item) {
-    this.name = name
-    this.foodsList = []
+  constructor(restName) {
+    this.restName = restName
+    this.menu = []
   }
 
-  addFoodItem(item) {
-    this.foodsList.push(item)
-    item.menu.push(this)
+  addFoodItemToRest(food) {
+    this.menu.push(food)
+    console.log(`${this.restName} has added ${food.itemName} to their Menu`)
   }
   // receiveOrderFromCustomer()
 
@@ -30,23 +31,37 @@ const purplePizza = new Restaurant('Purple Pizza')
 // const trippyTaco = new Restaurant('Trippy Taco')
 // const bigBurger = new Restaurant('Big Burger')
 
+//////////
+class Food {
+  constructor(itemName) {
+    this.itemName = itemName
+  }
+}
+
+const pizzaNapoletana = new Food('Pizza Napoletana')
+const pizzaFunghi = new Food('Pizza Funghi')
+const pizzaCapricciosa = new Food('Pizza Capricciosa')
+
+////////////
 class Customer {
   constructor(name, address) {
     this.name = name
     this.address = address
-    this.menu = []
+    this.order = []
+
   }
 
   orderFood(food) {
+    this.order.push(food)
     console.log(
-      `Hi I'm ${this.name} and I would like to order the ${food.item}`
+      `Hi I'm ${this.name} and I would like to order the ${food.itemName}`
     )
   }
 
-  requestMenu(restName) {
-    console.log(`At ${restName.name}, we have the following available, `)
-    // return this.menu.forEach(printMenu(restName))
-  }
+  // requestMenu(restName) {
+  //   console.log(`At ${restName.name}, we have the following available, `)
+  //   this.menu.forEach(printMenu(restName))
+  // }
 
   // receiveFood()
 }
@@ -67,21 +82,12 @@ class Driver {
 
 const arne = new Driver('Arne')
 
-class Food {
-  constructor(item) {
-    this.item = item
-  }
-}
+// printMenu = restaurant => console.log(restaurant.foodsList)
 
-printMenu = restaurant => console.log(restaurant.foodsList)
+// martin.requestMenu(purplePizza)
 
-pizzaNapoletana = new Food('Pizza Napoletana')
-pizzaFunghi = new Food('Pizza Funghi')
-pizzaCapricciosa = new Food('Pizza Capricciosa')
+purplePizza.addFoodItemToRest(pizzaNapoletana)
+purplePizza.addFoodItemToRest(pizzaFunghi)
+purplePizza.addFoodItemToRest(pizzaCapricciosa)
 
-martin.requestMenu(purplePizza)
 martin.orderFood(pizzaNapoletana)
-
-purplePizza.addFoodItem(pizzaNapoletana)
-purplePizza.addFoodItem(pizzaFunghi)
-purplePizza.addFoodItem(pizzaCapricciosa)
