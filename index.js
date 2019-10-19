@@ -16,15 +16,13 @@ class Restaurant {
   constructor(restName) {
     this.restName = restName
     this.menu = []
+    this.orders = []
   }
 
   addFoodItemToRest(food) {
     this.menu.push(food)
     console.log(`${this.restName} has added ${food.itemName} to their Menu`)
   }
-  // receiveOrderFromCustomer()
-
-  // foodReadyForDriver()
 }
 
 const purplePizza = new Restaurant('Purple Pizza')
@@ -48,14 +46,15 @@ class Customer {
     this.name = name
     this.address = address
     this.order = []
-
   }
 
-  orderFood(food) {
+  orderFood(food, restaurant) {
     this.order.push(food)
+    restaurant.orders.push(this)
     console.log(
-      `Hi I'm ${this.name} and I would like to order the ${food.itemName}`
+      `Hi I'm ${this.name} and I would like to order the ${food.itemName} from ${restaurant.restName}`
     )
+    notifyDriver(this.name, restaurant.restName)
   }
 
   // requestMenu(restName) {
@@ -73,6 +72,7 @@ const sarah = new Customer('Sarah', '2 Fast Rd')
 class Driver {
   constructor(name) {
     this.name = name
+    this.deliverTo = []
   }
 
   // pickUpOrder()
@@ -82,6 +82,13 @@ class Driver {
 
 const arne = new Driver('Arne')
 
+notifyDriver = (restaurant, customer) => {
+  // driver.deliverTo.push(this)
+  console.log(
+    `Hey Arne a pickup from ${restaurant.restName} is ready, please deliver it to ${customer.name}`
+  )
+}
+
 // printMenu = restaurant => console.log(restaurant.foodsList)
 
 // martin.requestMenu(purplePizza)
@@ -90,4 +97,6 @@ purplePizza.addFoodItemToRest(pizzaNapoletana)
 purplePizza.addFoodItemToRest(pizzaFunghi)
 purplePizza.addFoodItemToRest(pizzaCapricciosa)
 
-martin.orderFood(pizzaNapoletana)
+martin.orderFood(pizzaNapoletana, purplePizza)
+
+// arne.pickUpAndDeliver()
