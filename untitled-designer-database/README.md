@@ -1,7 +1,31 @@
+# Untitled Designer Database
+
+
+<h2>Designer</h2>
+Services
+Skills
+Email
+Location
+Hourly Rate
+Experience
+
+
+<h2>Customer</h2>
+Email
+Location
+
+
+
+
+
+
+
+Projects
 Availability of designers
 Taking jobs/full
 How many tasks at a time
 Max tasks
+
 
 Services | List of skills
 Adobe CS | Photoshop / Illustrator / InDesign
