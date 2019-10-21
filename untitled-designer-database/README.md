@@ -1,6 +1,6 @@
 # Untitled Designer Database
 
-<h2>Designer</h2>
+Designer
 * Services
 * Skills
 * Email
