@@ -18,13 +18,14 @@ Designer
   * Twitter
   * Insta
 
-<h2>Customer</h2>
+Customer
 * Email
 * Location
 
-<h2>Location</h2>
+Location
+<br>
 
-<h2>Services | Skills </h2>
+Services | Skills
 * Adobe CS | Photoshop / Illustrator / InDesign
 * Branding
 * Print Design
@@ -34,6 +35,6 @@ Designer
 * Photography
 * Microsoft Office / Powerpoint
 
-<h2>Endorsements/ Rating / Feedback</h2>
+Endorsements/ Rating / Feedback
 * Connections
 * Reviews (from other designers &/or customers)
