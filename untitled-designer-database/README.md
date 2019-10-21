@@ -1,18 +1,32 @@
 # Untitled Designer Database
 
 
+
 <h2>Designer</h2>
-Services
-Skills
-Email
-Location
-Hourly Rate
-Experience
+- Services
+- Skills
+- Email
+- Location
+- Hourly Rate
+- Experience
+- Projects
+  - Availability of designers
+  - Taking jobs/full
+  - How many tasks at a time
+  - Max tasks
+- Connect to social media
+  - Dribbble
+  - LinkedIn
+  - Twitter
+  - Insta
 
 
 <h2>Customer</h2>
-Email
-Location
+- Email
+- Location
+
+
+<h2>Location</h2>
 
 
 
@@ -20,36 +34,23 @@ Location
 
 
 
-Projects
-Availability of designers
-Taking jobs/full
-How many tasks at a time
-Max tasks
+<h2>Services | Skills </h2>
+- Adobe CS | Photoshop / Illustrator / InDesign
+- Branding
+- Print Design
+- Typography
+- Web design | Sketch / Figma / CSS
+- UI / UX Design
+- Photography
+- Microsoft Office / Powerpoint
 
 
-Services | List of skills
-Adobe CS | Photoshop / Illustrator / InDesign
-Branding
-Print Design
-Typography
-Web design | Sketch / Figma / CSS
-UI / UX Design
-Photography
-Microsoft Office / Powerpoint
-
-Experience
-how many years
 
 
-Rating system/stars
-Connections
-Endorsement
-Reviews (from other designers &/or customers)
+<h2>Endorsements/ Rating / Feedback</h2>
+- Connections
+- Reviews (from other designers &/or customers)
 
-Connect to social media
-Dribbble
-LinkedIn
-Twitter
-Insta
+
 
 
