@@ -1,27 +1,25 @@
 // Untitled Designer Database
 //
 
-// Classes (2)
+// Classes completed
 // Designer
 // Customer
 // Services
 
-// Skills
+// Classes to do..
 // Location
-// 
-// Hourly rate
+// Skills
 
-
-// Interactions (3)
+// Interactions completed
 // A Designer can add a Service
 // A customer can connect Designer about there Services
+// A customer can request a list of Designers by there Services
 
-
-// A customer can request a list of Designers by there Services and/or location
+// Interactions to do..
 // A customer can request a list of designers with a specific location
+// skills match with services?
 // A customer can request a quote from the Designer
 // the Driver picks up the Skill’s from the designer and delivers it to the Customer
-// skills match with services?
 
 ////////
 class Designer {
@@ -35,6 +33,7 @@ class Designer {
 
   addServiceToDesigner(service) {
     this.services.push(service)
+    service.designers.push(this)
     console.log(
       `${this.desName} has added ${service.item} as an available service`
     )
@@ -42,13 +41,18 @@ class Designer {
 }
 
 const sallySweet = new Designer('Sally Sweet')
-// const farrahLee = new designer('Farrah Lee')
-// const rosaJones = new designer('Rosa Jones')
+const farrahLee = new Designer('Farrah Lee')
+const rosaJones = new Designer('Rosa Jones')
 
 //////////
 class Service {
   constructor(item) {
     this.item = item
+    this.designers = []
+  }
+
+  printDesignersByService() {
+    this.designers.forEach(printName)
   }
 }
 
@@ -77,11 +81,15 @@ const martin = new Customer('Martin', 'martin@email.com')
 const sam = new Customer('Sam', 'sam@email.com')
 const sarah = new Customer('Sarah', 'sarah@email.com')
 
-// printMenu = designer => console.log(designer.servicesList)
+/////////// Global Functions
+printName = person => console.log(person.desName)
 
 sallySweet.addServiceToDesigner(webDesign)
 sallySweet.addServiceToDesigner(typography)
 sallySweet.addServiceToDesigner(branding)
+farrahLee.addServiceToDesigner(webDesign)
+rosaJones.addServiceToDesigner(webDesign)
 
 martin.requestService(webDesign, sallySweet)
 
+webDesign.printDesignersByService()
