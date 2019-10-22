@@ -31,7 +31,7 @@ class Designer {
     this.requests = []
   }
 
-  addServiceToDesigner(service) {
+  addService(service) {
     this.services.push(service)
     service.designers.push(this)
     console.log(
@@ -84,11 +84,11 @@ const sarah = new Customer('Sarah', 'sarah@email.com')
 /////////// Global Functions
 printName = person => console.log(person.desName)
 
-sallySweet.addServiceToDesigner(webDesign)
-sallySweet.addServiceToDesigner(typography)
-sallySweet.addServiceToDesigner(branding)
-farrahLee.addServiceToDesigner(webDesign)
-rosaJones.addServiceToDesigner(webDesign)
+sallySweet.addService(webDesign)
+sallySweet.addService(typography)
+sallySweet.addService(branding)
+farrahLee.addService(webDesign)
+rosaJones.addService(webDesign)
 
 martin.requestService(webDesign, sallySweet)
 
