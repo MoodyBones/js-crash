@@ -1,26 +1,5 @@
-class Person {
-  constructor(name, age) {
-    this.name = name
-    this.age = age
-  }
-  greet(person) {
-    console.log('Hello ' + person.name, 'my name is ', this.name)
-  }
-  attend(meetup) {
-    this.meetup = meetup
-    meetup.attendees.push(this)
-  }
-}
-
-class Meetup {
-  constructor(name) {
-    this.name = name
-    this.attendees = []
-  }
-  printAttendeeNames() {
-    this.attendees.forEach(printName)
-  }
-}
+const Person = require('./person')
+const Meetup = require('./meetup')
 
 printName = person => console.log(person.name)
 
