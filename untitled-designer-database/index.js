@@ -23,9 +23,9 @@
 
 ////////
 class Designer {
-  constructor(desName) {
+  constructor(desName, desEmail) {
     this.desName = desName
-    // this.desEmail = desEmail
+    this.desEmail = desEmail
     // this.location = desLocation
     this.services = []
     this.requests = []
@@ -40,9 +40,9 @@ class Designer {
   }
 }
 
-const sallySweet = new Designer('Sally Sweet')
-const farrahLee = new Designer('Farrah Lee')
-const rosaJones = new Designer('Rosa Jones')
+const sallySweet = new Designer('Sally Sweet', 'sallys@gmail.com')
+const farrahLee = new Designer('Farrah Lee', 'farrahl@gmail.com')
+const rosaJones = new Designer('Rosa Jones', 'rosaj@gmail.com')
 
 //////////
 class Service {
@@ -80,6 +80,14 @@ class Customer {
 const martin = new Customer('Martin', 'martin@email.com')
 const sam = new Customer('Sam', 'sam@email.com')
 const sarah = new Customer('Sarah', 'sarah@email.com')
+
+
+class Location {
+  constructor(city) {
+    this.city = city
+    this.cities = []
+  }
+}
 
 /////////// Global Functions
 printName = person => console.log(person.desName)
