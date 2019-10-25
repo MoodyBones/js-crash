@@ -7,7 +7,7 @@ module.exports = class Person {
     console.log('Hello ' + person.name, 'my name is ', this.name)
   }
   attend(meetup) {
-    this.meetup = meetup
+    this.meetup = meetup.name
     meetup.attendees.push(this)
   }
 }
