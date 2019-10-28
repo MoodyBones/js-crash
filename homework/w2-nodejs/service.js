@@ -18,4 +18,4 @@ module.exports = class Service {
   }
 }
 
-const printName = person => console.log(Chalk.blue(person.desName))
+const printName = person => console.log(Chalk.blue(person))
