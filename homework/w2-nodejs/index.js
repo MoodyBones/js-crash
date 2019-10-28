@@ -4,6 +4,7 @@
 const Designer = require('./designer')
 const Service = require('./service')
 const Customer = require('./customer')
+const Database = require('./database')
 
 //////// Classes
 //
@@ -31,9 +32,9 @@ const sarah = new Customer('Sarah', 'sarah@email.com')
 sallySweet.addService(webDesign)
 sallySweet.addService(UXDesign)
 sallySweet.addService(animation)
+rosaJones.addService(animation)
 rosaJones.addService(typography)
 rosaJones.addService(UIDesign)
-rosaJones.addService(animation)
 farrahLee.addService(printDesign)
 farrahLee.addService(branding)
 
@@ -43,5 +44,11 @@ sam.requestService(typography, rosaJones)
 sam.requestService(UIDesign, rosaJones)
 sarah.requestService(branding, farrahLee)
 
-webDesign.printDesignersByService()
 animation.printDesignersByService()
+webDesign.printDesignersByService()
+
+Database.save('service.json', animation)
+Database.save('designer.json', sallySweet)
+Database.save('customer.json', martin)
+
+const loadedFile = Database.load('service.json')

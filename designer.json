@@ -1,20 +1,65 @@
 {
   "desName": "Sally Sweet",
   "desEmail": "sallys@gmail.com",
-  "services": [],
+  "services": [
+    {
+      "item": "Web Design",
+      "designers": [
+        "Sally Sweet"
+      ]
+    },
+    {
+      "item": "UX Design",
+      "designers": [
+        "Sally Sweet"
+      ]
+    },
+    {
+      "item": "Animation",
+      "designers": [
+        "Sally Sweet",
+        "Rosa Jones"
+      ]
+    }
+  ],
   "requests": [
     {
       "name": "Martin",
       "email": "martin@email.com",
-      "request": [],
-      "service": "Animation"
+      "request": [
+        {
+          "item": "Web Design",
+          "designers": [
+            "Sally Sweet"
+          ]
+        },
+        {
+          "item": "Animation",
+          "designers": [
+            "Sally Sweet",
+            "Rosa Jones"
+          ]
+        }
+      ]
     },
     {
       "name": "Martin",
       "email": "martin@email.com",
-      "request": [],
-      "service": "Animation"
+      "request": [
+        {
+          "item": "Web Design",
+          "designers": [
+            "Sally Sweet"
+          ]
+        },
+        {
+          "item": "Animation",
+          "designers": [
+            "Sally Sweet",
+            "Rosa Jones"
+          ]
+        }
+      ]
     }
-  ],
-  "service": "Animation"
+  ]
 }
