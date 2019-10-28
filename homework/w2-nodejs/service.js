@@ -7,8 +7,14 @@ module.exports = class Service {
   }
 
   printDesignersByService() {
-    console.log(`The following designers have experience in ${this.item}:`)
-    this.designers.forEach(printName)
+    if (this.designers.length === 0) {
+      console.log(
+        `Sorry, we don't have any designers that are experienced in ${this.item}.`
+      )
+    } else {
+      console.log(`The following designers have experience in ${this.item}:`)
+      this.designers.forEach(printName)
+    }
   }
 }
 
