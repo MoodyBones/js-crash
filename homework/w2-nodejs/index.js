@@ -27,8 +27,6 @@ const martin = new Customer('Martin', 'martin@email.com')
 const sam = new Customer('Sam', 'sam@email.com')
 const sarah = new Customer('Sarah', 'sarah@email.com')
 
-/////////// Global Functions
-
 /////////// Interactions
 sallySweet.addService(webDesign)
 sallySweet.addService(UXDesign)
