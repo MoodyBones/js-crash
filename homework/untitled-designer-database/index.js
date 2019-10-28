@@ -52,6 +52,7 @@ class Service {
   }
 
   printDesignersByService() {
+    console.log(`The following designers have experience in ${this.item}:`)
     this.designers.forEach(printName)
   }
 }
@@ -117,3 +118,4 @@ sam.requestService(UIDesign, rosaJones)
 sarah.requestService(branding, farrahLee)
 
 webDesign.printDesignersByService()
+animation.printDesignersByService()
