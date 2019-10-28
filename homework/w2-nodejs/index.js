@@ -28,10 +28,10 @@ const sam = new Customer('Sam', 'sam@email.com')
 const sarah = new Customer('Sarah', 'sarah@email.com')
 
 /////////// Global Functions
-printName = person => console.log(person.desName)
 
 /////////// Interactions
 sallySweet.addService(webDesign)
+sallySweet.addService(UXDesign)
 sallySweet.addService(animation)
 rosaJones.addService(typography)
 rosaJones.addService(UIDesign)

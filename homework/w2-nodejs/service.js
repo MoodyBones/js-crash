@@ -9,3 +9,5 @@ module.exports = class Service {
     this.designers.forEach(printName)
   }
 }
+
+const printName = person => console.log(person.desName)
