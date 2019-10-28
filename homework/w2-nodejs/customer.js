@@ -14,7 +14,7 @@ module.exports = class Customer {
       `Hey ${
         designer.name
       }, I'm seeking a designer with experience in ${Chalk.green(
-        service.item
+        service.name
       )}, are you available to help? Kind regards, ${this.name}`
     )
   }

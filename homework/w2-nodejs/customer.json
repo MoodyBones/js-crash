@@ -4,7 +4,7 @@
   "request": [
     [
       {
-        "item": "Web Design",
+        "name": "Web Design",
         "designers": [
           "Sally Sweet"
         ]
@@ -14,19 +14,19 @@
         "email": "sallys@gmail.com",
         "services": [
           {
-            "item": "Web Design",
+            "name": "Web Design",
             "designers": [
               "Sally Sweet"
             ]
           },
           {
-            "item": "UX Design",
+            "name": "UX Design",
             "designers": [
               "Sally Sweet"
             ]
           },
           {
-            "item": "Animation",
+            "name": "Animation",
             "designers": [
               "Sally Sweet",
               "Rosa Jones"
@@ -40,7 +40,7 @@
               "martin@email.com"
             ],
             {
-              "item": "Web Design",
+              "name": "Web Design",
               "designers": [
                 "Sally Sweet"
               ]
@@ -52,7 +52,7 @@
               "martin@email.com"
             ],
             {
-              "item": "Animation",
+              "name": "Animation",
               "designers": [
                 "Sally Sweet",
                 "Rosa Jones"
@@ -64,7 +64,7 @@
     ],
     [
       {
-        "item": "Animation",
+        "name": "Animation",
         "designers": [
           "Sally Sweet",
           "Rosa Jones"
@@ -75,19 +75,19 @@
         "email": "sallys@gmail.com",
         "services": [
           {
-            "item": "Web Design",
+            "name": "Web Design",
             "designers": [
               "Sally Sweet"
             ]
           },
           {
-            "item": "UX Design",
+            "name": "UX Design",
             "designers": [
               "Sally Sweet"
             ]
           },
           {
-            "item": "Animation",
+            "name": "Animation",
             "designers": [
               "Sally Sweet",
               "Rosa Jones"
@@ -101,7 +101,7 @@
               "martin@email.com"
             ],
             {
-              "item": "Web Design",
+              "name": "Web Design",
               "designers": [
                 "Sally Sweet"
               ]
@@ -113,7 +113,7 @@
               "martin@email.com"
             ],
             {
-              "item": "Animation",
+              "name": "Animation",
               "designers": [
                 "Sally Sweet",
                 "Rosa Jones"

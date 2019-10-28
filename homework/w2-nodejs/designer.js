@@ -13,7 +13,7 @@ module.exports = class Designer {
     service.designers.push(this.name)
     console.log(
       `${Chalk.blue(this.name)} has added ${Chalk.green(
-        service.item
+        service.name
       )} as an available service`
     )
   }
