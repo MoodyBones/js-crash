@@ -3,7 +3,7 @@
   "designers": [
     {
       "name": "Sally Sweet",
-      "desEmail": "sallys@gmail.com",
+      "email": "sallys@gmail.com",
       "services": [],
       "requests": [
         {
@@ -23,7 +23,7 @@
     },
     {
       "name": "Rosa Jones",
-      "desEmail": "rosaj@gmail.com",
+      "email": "rosaj@gmail.com",
       "services": [],
       "requests": [
         {

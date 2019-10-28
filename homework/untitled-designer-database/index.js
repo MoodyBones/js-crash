@@ -23,9 +23,9 @@
 
 ////////
 class Designer {
-  constructor(name, desEmail) {
+  constructor(name, email) {
     this.name = name
-    this.desEmail = desEmail
+    this.email = email
     // this.location = desLocation
     this.services = []
     this.requests = []

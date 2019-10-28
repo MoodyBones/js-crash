@@ -1,9 +1,9 @@
 const Chalk = require('chalk')
 
 module.exports = class Designer {
-  constructor(name, desEmail) {
+  constructor(name, email) {
     this.name = name
-    this.desEmail = desEmail
+    this.email = email
     this.services = []
     this.requests = []
   }

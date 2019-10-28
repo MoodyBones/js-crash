@@ -11,7 +11,7 @@
       },
       {
         "name": "Sally Sweet",
-        "desEmail": "sallys@gmail.com",
+        "email": "sallys@gmail.com",
         "services": [
           {
             "item": "Web Design",
@@ -72,7 +72,7 @@
       },
       {
         "name": "Sally Sweet",
-        "desEmail": "sallys@gmail.com",
+        "email": "sallys@gmail.com",
         "services": [
           {
             "item": "Web Design",
