@@ -9,7 +9,8 @@ module.exports = class Designer {
   }
 
   addService(service) {
-    this.services.push(service)
+    // this.services.push(service) // replace with below, bug fix database.js save function
+    this.service = service.item
     service.designers.push(this)
     console.log(
       `${Chalk.blue(this.desName)} has added ${Chalk.green(
