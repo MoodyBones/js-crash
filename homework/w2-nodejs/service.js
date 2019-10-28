@@ -1,3 +1,5 @@
+const Chalk = require('chalk')
+
 module.exports = class Service {
   constructor(item) {
     this.item = item
@@ -10,4 +12,4 @@ module.exports = class Service {
   }
 }
 
-const printName = person => console.log(person.desName)
+const printName = person => console.log(Chalk.blue(person.desName))

@@ -1,3 +1,5 @@
+const Chalk = require('chalk')
+
 module.exports = class Customer {
   constructor(name, email) {
     this.name = name
@@ -9,7 +11,11 @@ module.exports = class Customer {
     this.request.push(service)
     designer.requests.push(this)
     console.log(
-      `Hey ${designer.desName}, I'm seeking a designer with experience in ${service.item}, are you available to help? Kind regards, ${this.name}`
+      `Hey ${
+        designer.desName
+      }, I'm seeking a designer with experience in ${Chalk.green(
+        service.item
+      )}, are you available to help? Kind regards, ${this.name}`
     )
   }
 }
