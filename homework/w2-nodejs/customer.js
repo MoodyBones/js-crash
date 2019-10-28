@@ -8,11 +8,11 @@ module.exports = class Customer {
   }
 
   requestService(service, designer) {
-    this.request.push([service, designer]) 
+    this.request.push([service, designer])
     designer.requests.push([[this.name, this.email], service])
     console.log(
       `Hey ${
-        designer.desName
+        designer.name
       }, I'm seeking a designer with experience in ${Chalk.green(
         service.item
       )}, are you available to help? Kind regards, ${this.name}`

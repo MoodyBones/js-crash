@@ -10,7 +10,7 @@
         ]
       },
       {
-        "desName": "Sally Sweet",
+        "name": "Sally Sweet",
         "desEmail": "sallys@gmail.com",
         "services": [
           {
@@ -71,7 +71,7 @@
         ]
       },
       {
-        "desName": "Sally Sweet",
+        "name": "Sally Sweet",
         "desEmail": "sallys@gmail.com",
         "services": [
           {

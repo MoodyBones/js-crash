@@ -23,8 +23,8 @@
 
 ////////
 class Designer {
-  constructor(desName, desEmail) {
-    this.desName = desName
+  constructor(name, desEmail) {
+    this.name = name
     this.desEmail = desEmail
     // this.location = desLocation
     this.services = []
@@ -35,7 +35,7 @@ class Designer {
     this.services.push(service)
     service.designers.push(this)
     console.log(
-      `${this.desName} has added ${service.item} as an available service`
+      `${this.name} has added ${service.item} as an available service`
     )
   }
 }
@@ -77,7 +77,7 @@ class Customer {
     this.request.push(service)
     designer.requests.push(this)
     console.log(
-      `Hey ${designer.desName}, I'm seeking a designer with experience in ${service.item}, are you available to help? Kind regards, ${this.name}`
+      `Hey ${designer.name}, I'm seeking a designer with experience in ${service.item}, are you available to help? Kind regards, ${this.name}`
     )
   }
 }
@@ -93,14 +93,8 @@ const sarah = new Customer('Sarah', 'sarah@email.com')
 //   }
 // }
 
-
-
 /////////// Global Functions
-printName = person => console.log(person.desName)
-
-
-
-
+printName = person => console.log(person.name)
 
 /////////// Interactions
 sallySweet.addService(webDesign)

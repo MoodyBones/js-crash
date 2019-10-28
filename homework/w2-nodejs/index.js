@@ -52,3 +52,4 @@ Database.save('designer.json', sallySweet)
 Database.save('customer.json', martin)
 
 const loadedFile = Database.load('service.json')
+console.log(loadedFile.name)

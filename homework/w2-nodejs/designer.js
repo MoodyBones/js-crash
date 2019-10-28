@@ -1,8 +1,8 @@
 const Chalk = require('chalk')
 
 module.exports = class Designer {
-  constructor(desName, desEmail) {
-    this.desName = desName
+  constructor(name, desEmail) {
+    this.name = name
     this.desEmail = desEmail
     this.services = []
     this.requests = []
@@ -10,9 +10,9 @@ module.exports = class Designer {
 
   addService(service) {
     this.services.push(service)
-    service.designers.push(this.desName)
+    service.designers.push(this.name)
     console.log(
-      `${Chalk.blue(this.desName)} has added ${Chalk.green(
+      `${Chalk.blue(this.name)} has added ${Chalk.green(
         service.item
       )} as an available service`
     )
