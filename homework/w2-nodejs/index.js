@@ -1,6 +1,4 @@
 // Untitled Designer Database
-//
-
 const Designer = require('./designer')
 const Service = require('./service')
 const Customer = require('./customer')
@@ -51,5 +49,5 @@ Database.save('service.json', animation)
 Database.save('designer.json', sallySweet)
 Database.save('customer.json', martin)
 
-const loadedFile = Database.load('service.json')
+const loadedFile = Database.load('designer.json')
 console.log(loadedFile.name)
