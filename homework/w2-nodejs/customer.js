@@ -8,17 +8,14 @@ module.exports = class Customer {
   }
 
   requestService(service, designer) {
-                                      // this.request.push(service) // replace with below, bug fix database.js save function
-                                      this.service = service.item
-                                      designer.requests.push(this)
-                                      console.log(
-                                        `Hey ${
-                                          designer.desName
-                                        }, I'm seeking a designer with experience in ${Chalk.green(
-                                          service.item
-                                        )}, are you available to help? Kind regards, ${
-                                          this.name
-                                        }`
-                                      )
-                                    }
+    this.request.push([service, designer]) 
+    designer.requests.push([[this.name, this.email], service])
+    console.log(
+      `Hey ${
+        designer.desName
+      }, I'm seeking a designer with experience in ${Chalk.green(
+        service.item
+      )}, are you available to help? Kind regards, ${this.name}`
+    )
+  }
 }
