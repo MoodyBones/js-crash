@@ -6,6 +6,7 @@ module.exports = class Designer {
     this.email = email
     this.services = []
     this.requests = []
+    // this.designerRecord = this.listCurrentDesigners(name)
   }
 
   addService(service) {
@@ -17,4 +18,11 @@ module.exports = class Designer {
       )} as an available service`
     )
   }
+
+  // listCurrentDesigners(name) {
+  //   const designers = []
+  //   designers.push(name)
+  //   console.log(designers)
+  // }
 }
+
