@@ -1,7 +1,45 @@
-{
-  "name": "Animation",
-  "designers": [
-    "Sally Sweet",
-    "Rosa Jones"
-  ]
-}
+[
+  {
+    "name": "Web Design",
+    "designers": [
+      "Sally Sweet"
+    ]
+  },
+  {
+    "name": "Typography",
+    "designers": [
+      "Rosa Jones"
+    ]
+  },
+  {
+    "name": "Branding",
+    "designers": [
+      "Farrah Lee"
+    ]
+  },
+  {
+    "name": "Print Design",
+    "designers": [
+      "Farrah Lee"
+    ]
+  },
+  {
+    "name": "UI Design",
+    "designers": [
+      "Rosa Jones"
+    ]
+  },
+  {
+    "name": "UX Design",
+    "designers": [
+      "Sally Sweet"
+    ]
+  },
+  {
+    "name": "Animation",
+    "designers": [
+      "Sally Sweet",
+      "Rosa Jones"
+    ]
+  }
+]
