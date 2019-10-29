@@ -2,12 +2,16 @@
   {
     "name": "Martin",
     "email": "martin@email.com",
+    "inquiry": [],
     "request": [
       [
         {
           "name": "Web Design",
           "designers": [
-            "Sally Sweet"
+            [
+              "Sally Sweet",
+              "sallys@gmail.com"
+            ]
           ]
         },
         {
@@ -17,20 +21,32 @@
             {
               "name": "Web Design",
               "designers": [
-                "Sally Sweet"
+                [
+                  "Sally Sweet",
+                  "sallys@gmail.com"
+                ]
               ]
             },
             {
               "name": "UX Design",
               "designers": [
-                "Sally Sweet"
+                [
+                  "Sally Sweet",
+                  "sallys@gmail.com"
+                ]
               ]
             },
             {
               "name": "Animation",
               "designers": [
-                "Sally Sweet",
-                "Rosa Jones"
+                [
+                  "Sally Sweet",
+                  "sallys@gmail.com"
+                ],
+                [
+                  "Rosa Jones",
+                  "rosaj@gmail.com"
+                ]
               ]
             }
           ],
@@ -43,7 +59,10 @@
               {
                 "name": "Web Design",
                 "designers": [
-                  "Sally Sweet"
+                  [
+                    "Sally Sweet",
+                    "sallys@gmail.com"
+                  ]
                 ]
               }
             ],
@@ -55,8 +74,14 @@
               {
                 "name": "Animation",
                 "designers": [
-                  "Sally Sweet",
-                  "Rosa Jones"
+                  [
+                    "Sally Sweet",
+                    "sallys@gmail.com"
+                  ],
+                  [
+                    "Rosa Jones",
+                    "rosaj@gmail.com"
+                  ]
                 ]
               }
             ]
@@ -67,8 +92,14 @@
         {
           "name": "Animation",
           "designers": [
-            "Sally Sweet",
-            "Rosa Jones"
+            [
+              "Sally Sweet",
+              "sallys@gmail.com"
+            ],
+            [
+              "Rosa Jones",
+              "rosaj@gmail.com"
+            ]
           ]
         },
         {
@@ -78,20 +109,32 @@
             {
               "name": "Web Design",
               "designers": [
-                "Sally Sweet"
+                [
+                  "Sally Sweet",
+                  "sallys@gmail.com"
+                ]
               ]
             },
             {
               "name": "UX Design",
               "designers": [
-                "Sally Sweet"
+                [
+                  "Sally Sweet",
+                  "sallys@gmail.com"
+                ]
               ]
             },
             {
               "name": "Animation",
               "designers": [
-                "Sally Sweet",
-                "Rosa Jones"
+                [
+                  "Sally Sweet",
+                  "sallys@gmail.com"
+                ],
+                [
+                  "Rosa Jones",
+                  "rosaj@gmail.com"
+                ]
               ]
             }
           ],
@@ -104,7 +147,10 @@
               {
                 "name": "Web Design",
                 "designers": [
-                  "Sally Sweet"
+                  [
+                    "Sally Sweet",
+                    "sallys@gmail.com"
+                  ]
                 ]
               }
             ],
@@ -116,8 +162,14 @@
               {
                 "name": "Animation",
                 "designers": [
-                  "Sally Sweet",
-                  "Rosa Jones"
+                  [
+                    "Sally Sweet",
+                    "sallys@gmail.com"
+                  ],
+                  [
+                    "Rosa Jones",
+                    "rosaj@gmail.com"
+                  ]
                 ]
               }
             ]
@@ -129,12 +181,46 @@
   {
     "name": "Sam",
     "email": "sam@email.com",
+    "inquiry": [
+      [
+        {
+          "name": "Typography",
+          "designers": [
+            [
+              "Rosa Jones",
+              "rosaj@gmail.com"
+            ],
+            [
+              "Farrah Lee",
+              "farrahl@gmail.com"
+            ]
+          ]
+        },
+        [
+          [
+            "Rosa Jones",
+            "rosaj@gmail.com"
+          ],
+          [
+            "Farrah Lee",
+            "farrahl@gmail.com"
+          ]
+        ]
+      ]
+    ],
     "request": [
       [
         {
           "name": "Typography",
           "designers": [
-            "Rosa Jones"
+            [
+              "Rosa Jones",
+              "rosaj@gmail.com"
+            ],
+            [
+              "Farrah Lee",
+              "farrahl@gmail.com"
+            ]
           ]
         },
         {
@@ -144,20 +230,36 @@
             {
               "name": "Animation",
               "designers": [
-                "Sally Sweet",
-                "Rosa Jones"
+                [
+                  "Sally Sweet",
+                  "sallys@gmail.com"
+                ],
+                [
+                  "Rosa Jones",
+                  "rosaj@gmail.com"
+                ]
               ]
             },
             {
               "name": "Typography",
               "designers": [
-                "Rosa Jones"
+                [
+                  "Rosa Jones",
+                  "rosaj@gmail.com"
+                ],
+                [
+                  "Farrah Lee",
+                  "farrahl@gmail.com"
+                ]
               ]
             },
             {
               "name": "UI Design",
               "designers": [
-                "Rosa Jones"
+                [
+                  "Rosa Jones",
+                  "rosaj@gmail.com"
+                ]
               ]
             }
           ],
@@ -170,7 +272,14 @@
               {
                 "name": "Typography",
                 "designers": [
-                  "Rosa Jones"
+                  [
+                    "Rosa Jones",
+                    "rosaj@gmail.com"
+                  ],
+                  [
+                    "Farrah Lee",
+                    "farrahl@gmail.com"
+                  ]
                 ]
               }
             ],
@@ -182,7 +291,10 @@
               {
                 "name": "UI Design",
                 "designers": [
-                  "Rosa Jones"
+                  [
+                    "Rosa Jones",
+                    "rosaj@gmail.com"
+                  ]
                 ]
               }
             ]
@@ -193,7 +305,10 @@
         {
           "name": "UI Design",
           "designers": [
-            "Rosa Jones"
+            [
+              "Rosa Jones",
+              "rosaj@gmail.com"
+            ]
           ]
         },
         {
@@ -203,20 +318,36 @@
             {
               "name": "Animation",
               "designers": [
-                "Sally Sweet",
-                "Rosa Jones"
+                [
+                  "Sally Sweet",
+                  "sallys@gmail.com"
+                ],
+                [
+                  "Rosa Jones",
+                  "rosaj@gmail.com"
+                ]
               ]
             },
             {
               "name": "Typography",
               "designers": [
-                "Rosa Jones"
+                [
+                  "Rosa Jones",
+                  "rosaj@gmail.com"
+                ],
+                [
+                  "Farrah Lee",
+                  "farrahl@gmail.com"
+                ]
               ]
             },
             {
               "name": "UI Design",
               "designers": [
-                "Rosa Jones"
+                [
+                  "Rosa Jones",
+                  "rosaj@gmail.com"
+                ]
               ]
             }
           ],
@@ -229,7 +360,14 @@
               {
                 "name": "Typography",
                 "designers": [
-                  "Rosa Jones"
+                  [
+                    "Rosa Jones",
+                    "rosaj@gmail.com"
+                  ],
+                  [
+                    "Farrah Lee",
+                    "farrahl@gmail.com"
+                  ]
                 ]
               }
             ],
@@ -241,7 +379,10 @@
               {
                 "name": "UI Design",
                 "designers": [
-                  "Rosa Jones"
+                  [
+                    "Rosa Jones",
+                    "rosaj@gmail.com"
+                  ]
                 ]
               }
             ]
@@ -253,12 +394,42 @@
   {
     "name": "Sarah",
     "email": "sarah@email.com",
+    "inquiry": [
+      [
+        {
+          "name": "Animation",
+          "designers": [
+            [
+              "Sally Sweet",
+              "sallys@gmail.com"
+            ],
+            [
+              "Rosa Jones",
+              "rosaj@gmail.com"
+            ]
+          ]
+        },
+        [
+          [
+            "Sally Sweet",
+            "sallys@gmail.com"
+          ],
+          [
+            "Rosa Jones",
+            "rosaj@gmail.com"
+          ]
+        ]
+      ]
+    ],
     "request": [
       [
         {
           "name": "Branding",
           "designers": [
-            "Farrah Lee"
+            [
+              "Farrah Lee",
+              "farrahl@gmail.com"
+            ]
           ]
         },
         {
@@ -266,15 +437,34 @@
           "email": "farrahl@gmail.com",
           "services": [
             {
+              "name": "Typography",
+              "designers": [
+                [
+                  "Rosa Jones",
+                  "rosaj@gmail.com"
+                ],
+                [
+                  "Farrah Lee",
+                  "farrahl@gmail.com"
+                ]
+              ]
+            },
+            {
               "name": "Print Design",
               "designers": [
-                "Farrah Lee"
+                [
+                  "Farrah Lee",
+                  "farrahl@gmail.com"
+                ]
               ]
             },
             {
               "name": "Branding",
               "designers": [
-                "Farrah Lee"
+                [
+                  "Farrah Lee",
+                  "farrahl@gmail.com"
+                ]
               ]
             }
           ],
@@ -287,7 +477,10 @@
               {
                 "name": "Branding",
                 "designers": [
-                  "Farrah Lee"
+                  [
+                    "Farrah Lee",
+                    "farrahl@gmail.com"
+                  ]
                 ]
               }
             ]
