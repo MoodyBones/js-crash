@@ -21,7 +21,15 @@ const UIDesign = new Service('UI Design')
 const UXDesign = new Service('UX Design')
 const animation = new Service('Animation')
 
-const serviceRecord = [webDesign, typography, branding, printDesign, UIDesign, UXDesign, animation]
+const serviceRecord = [
+  webDesign,
+  typography,
+  branding,
+  printDesign,
+  UIDesign,
+  UXDesign,
+  animation,
+]
 
 ////////////
 
@@ -41,15 +49,14 @@ rosaJones.addService(UIDesign)
 farrahLee.addService(printDesign)
 farrahLee.addService(branding)
 
-martin.requestService(webDesign, sallySweet)
-martin.requestService(animation, sallySweet)
-sam.requestService(typography, rosaJones)
-sam.requestService(UIDesign, rosaJones)
-sarah.requestService(branding, farrahLee)
+martin.contactDesigner(webDesign, sallySweet)
+martin.contactDesigner(animation, sallySweet)
+sam.contactDesigner(typography, rosaJones)
+sam.contactDesigner(UIDesign, rosaJones)
+sarah.contactDesigner(branding, farrahLee)
 
 animation.printDesignersByService()
 webDesign.printDesignersByService()
-
 
 // const designerRecord = Designer.listOfAllCurrentDesigners()
 // Database.save('service.json', animation)
@@ -59,8 +66,6 @@ webDesign.printDesignersByService()
 Database.save('service.json', serviceRecord)
 Database.save('designer.json', designerRecord)
 Database.save('customer.json', customerRecord)
-
-
 
 // const loadedFile = Database.load('designer.json')
 // console.log(loadedFile.name)
