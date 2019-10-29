@@ -7,7 +7,7 @@ module.exports = class Customer {
     this.request = []
   }
 
-  contactDesigner(service, designer) {
+  requestDesigner(service, designer) {
     this.request.push([service, designer])
     designer.requests.push([[this.name, this.email], service])
     console.log(
@@ -17,6 +17,10 @@ module.exports = class Customer {
         service.name
       )}, are you available to help? Kind regards, ${this.name}`
     )
+  }
+
+  inquireService(service) {
+    if (designer.)
   }
 
   // printDesignersByService() {

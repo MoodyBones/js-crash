@@ -49,11 +49,13 @@ rosaJones.addService(UIDesign)
 farrahLee.addService(printDesign)
 farrahLee.addService(branding)
 
-martin.contactDesigner(webDesign, sallySweet)
-martin.contactDesigner(animation, sallySweet)
-sam.contactDesigner(typography, rosaJones)
-sam.contactDesigner(UIDesign, rosaJones)
-sarah.contactDesigner(branding, farrahLee)
+sarah.inquireService(animation)
+
+martin.requestDesigner(webDesign, sallySweet)
+martin.requestDesigner(animation, sallySweet)
+sam.requestDesigner(typography, rosaJones)
+sam.requestDesigner(UIDesign, rosaJones)
+sarah.requestDesigner(branding, farrahLee)
 
 animation.printDesignersByService()
 webDesign.printDesignersByService()
