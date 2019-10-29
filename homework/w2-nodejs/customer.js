@@ -4,6 +4,7 @@ module.exports = class Customer {
   constructor(name, email) {
     this.name = name
     this.email = email
+    this.inquiry = []
     this.request = []
   }
 
@@ -20,17 +21,14 @@ module.exports = class Customer {
   }
 
   inquireService(service) {
-    if (designer.)
+    if (service.name) {
+      this.inquiry.push([service, service.designers])
+      console.log(
+        `The following designers have experience in ${Chalk.green(
+          service.name
+        )}:`
+      )
+      console.log(service.designers)
+    }
   }
-
-  // printDesignersByService() {
-  //   if (this.designers.length === 0) {
-  //     console.log(
-  //       `Sorry, we don't have any designers that are experienced in ${this.name}.`
-  //     )
-  //   } else {
-  //     console.log(`The following designers have experience in ${this.name}:`)
-  //     this.designers.forEach(printName)
-  //   }
-  // }
 }
