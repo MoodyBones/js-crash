@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Web Design",
+    "designers": [
+      [
+        "Sally Sweet",
+        "sallys@gmail.com"
+      ]
+    ]
+  },
+  {
+    "name": "Typography",
+    "designers": [
+      [
+        "Rosa Jones",
+        "rosaj@gmail.com"
+      ],
+      [
+        "Farrah Lee",
+        "farrahl@gmail.com"
+      ]
+    ]
+  },
+  {
+    "name": "Branding",
+    "designers": [
+      [
+        "Farrah Lee",
+        "farrahl@gmail.com"
+      ]
+    ]
+  },
+  {
+    "name": "Print Design",
+    "designers": [
+      [
+        "Farrah Lee",
+        "farrahl@gmail.com"
+      ]
+    ]
+  },
+  {
+    "name": "UI Design",
+    "designers": [
+      [
+        "Rosa Jones",
+        "rosaj@gmail.com"
+      ]
+    ]
+  },
+  {
+    "name": "UX Design",
+    "designers": [
+      [
+        "Sally Sweet",
+        "sallys@gmail.com"
+      ]
+    ]
+  },
+  {
+    "name": "Animation",
+    "designers": [
+      [
+        "Sally Sweet",
+        "sallys@gmail.com"
+      ],
+      [
+        "Rosa Jones",
+        "rosaj@gmail.com"
+      ]
+    ]
+  }
+]
