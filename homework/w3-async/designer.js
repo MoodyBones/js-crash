@@ -12,11 +12,11 @@ module.exports = class Designer {
   addService(service) {
     this.services.push(service)
     service.designers.push([this.name, this.email])
-    console.log(
-      `${Chalk.blue(this.name)} has added ${Chalk.green(
-        service.name
-      )} as an available service`
-    )
+    // console.log(
+    //   `${Chalk.blue(this.name)} has added ${Chalk.green(
+    //     service.name
+    //   )} as an available service`
+    // )
   }
 
   // listCurrentDesigners(name) {

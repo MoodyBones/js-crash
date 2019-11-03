@@ -11,13 +11,13 @@ module.exports = class Customer {
   requestDesigner(service, designer) {
     this.request.push([service, designer])
     designer.requests.push([[this.name, this.email], service])
-    console.log(
-      `Hey ${
-        designer.name
-      }, I'm seeking a designer with experience in ${Chalk.green(
-        service.name
-      )}, are you available to help? Kind regards, ${this.name}`
-    )
+    // console.log(
+    //   `Hey ${
+    //     designer.name
+    //   }, I'm seeking a designer with experience in ${Chalk.green(
+    //     service.name
+    //   )}, are you available to help? Kind regards, ${this.name}`
+    // )
   }
 
   inquireService(service) {
