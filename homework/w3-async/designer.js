@@ -1,8 +1,9 @@
 module.exports = class Designer {
-  constructor(name, email, skills = []) {
+  constructor(name, email, skills = [], requests = []) {
     this.name = name
     this.email = email
     this.skills = skills
+    this.requests = requests
   }
 
   addSkill(skill) {
@@ -11,7 +12,7 @@ module.exports = class Designer {
     skill.designers.push(this.name)
   }
 
-  static create({ name, email, skills }) {
-    return new Designer(name, email, skills)
+  static create({ name, email, skills, requests }) {
+    return new Designer(name, email, skills, requests)
   }
 }
