@@ -1,12 +1,12 @@
 const Chalk = require('chalk')
 
-module.exports = class Service {
+module.exports = class Skill {
   constructor(name) {
     this.name = name
     this.designers = []
   }
 
-  printDesignersByService() {
+  printDesignersBySkill() {
     if (this.designers.length === 0) {
       console.log(
         `Sorry, we don't have any designers that are experienced in ${this.name}.`

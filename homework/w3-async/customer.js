@@ -8,27 +8,25 @@ module.exports = class Customer {
     this.request = []
   }
 
-  requestDesigner(service, designer) {
-    this.request.push([service, designer])
-    designer.requests.push([[this.name, this.email], service])
+  requestDesigner(skill, designer) {
+    this.request.push([skill, designer])
+    designer.requests.push([[this.name, this.email], skill])
     // console.log(
     //   `Hey ${
     //     designer.name
     //   }, I'm seeking a designer with experience in ${Chalk.green(
-    //     service.name
+    //     skill.name
     //   )}, are you available to help? Kind regards, ${this.name}`
     // )
   }
 
-  inquireService(service) {
-    if (service.name) {
-      this.inquiry.push([service, service.designers])
+  inquireSkill(skill) {
+    if (skill.name) {
+      this.inquiry.push([skill, skill.designers])
       console.log(
-        `The following designers have experience in ${Chalk.green(
-          service.name
-        )}:`
+        `The following designers have experience in ${Chalk.green(skill.name)}:`
       )
-      console.log(service.designers)
+      console.log(skill.designers)
     }
   }
 }

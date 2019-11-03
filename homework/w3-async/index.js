@@ -1,6 +1,6 @@
 // Untitled Designer Database
 const Designer = require('./designer')
-const Service = require('./service')
+const Skill = require('./skill')
 const Customer = require('./customer')
 const Database = require('./database')
 
@@ -13,15 +13,15 @@ const rosaJones = new Designer('Rosa Jones', 'rosaj@gmail.com')
 const designerRecord = [sallySweet, farrahLee, rosaJones]
 //////////
 
-const webDesign = new Service('Web Design')
-const typography = new Service('Typography')
-const branding = new Service('Branding')
-const printDesign = new Service('Print Design')
-const UIDesign = new Service('UI Design')
-const UXDesign = new Service('UX Design')
-const animation = new Service('Animation')
+const webDesign = new Skill('Web Design')
+const typography = new Skill('Typography')
+const branding = new Skill('Branding')
+const printDesign = new Skill('Print Design')
+const UIDesign = new Skill('UI Design')
+const UXDesign = new Skill('UX Design')
+const animation = new Skill('Animation')
 
-const serviceRecord = [
+const skillRecord = [
   webDesign,
   typography,
   branding,
@@ -40,18 +40,18 @@ const sarah = new Customer('Sarah', 'sarah@email.com')
 const customerRecord = [martin, sam, sarah]
 
 /////////// Interactions
-sallySweet.addService(webDesign)
-sallySweet.addService(UXDesign)
-sallySweet.addService(animation)
-rosaJones.addService(animation)
-rosaJones.addService(typography)
-rosaJones.addService(UIDesign)
-farrahLee.addService(typography)
-farrahLee.addService(printDesign)
-farrahLee.addService(branding)
+sallySweet.addSkill(webDesign)
+sallySweet.addSkill(UXDesign)
+sallySweet.addSkill(animation)
+rosaJones.addSkill(animation)
+rosaJones.addSkill(typography)
+rosaJones.addSkill(UIDesign)
+farrahLee.addSkill(typography)
+farrahLee.addSkill(printDesign)
+farrahLee.addSkill(branding)
 
-sarah.inquireService(animation)
-sam.inquireService(typography)
+sarah.inquireSkill(animation)
+sam.inquireSkill(typography)
 
 martin.requestDesigner(webDesign, sallySweet)
 martin.requestDesigner(animation, sallySweet)
@@ -59,16 +59,16 @@ sam.requestDesigner(typography, rosaJones)
 sam.requestDesigner(UIDesign, rosaJones)
 sarah.requestDesigner(branding, farrahLee)
 
-animation.printDesignersByService()
-webDesign.printDesignersByService()
+animation.printDesignersBySkill()
+webDesign.printDesignersBySkill()
 
-Database.save('service.json', serviceRecord)
+Database.save('skill.json', skillRecord)
 Database.save('designer.json', designerRecord)
 Database.save('customer.json', customerRecord)
 
-const loadedServices = Database.load('service.json')
+const loadedSkills = Database.load('skill.json')
 const loadedDesigners = Database.load('designer.json')
 const loadedCustomers = Database.load('customer.json')
-console.log(loadedServices)
+console.log(loadedSkills)
 console.log(loadedDesigners)
 console.log(loadedCustomers)
