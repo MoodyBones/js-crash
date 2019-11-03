@@ -4,14 +4,14 @@ const Skill = require('./skill')
 const Customer = require('./customer')
 const Database = require('./database')
 
-//////// Classes
-//
+////// Classes
+
 const sallySweet = new Designer('Sally Sweet', 'sallys@gmail.com')
 const farrahLee = new Designer('Farrah Lee', 'farrahl@gmail.com')
 const rosaJones = new Designer('Rosa Jones', 'rosaj@gmail.com')
 
 const designerRecord = [sallySweet, farrahLee, rosaJones]
-//////////
+////////
 
 const webDesign = new Skill('Web Design')
 const typography = new Skill('Typography')
@@ -31,7 +31,7 @@ const skillRecord = [
   animation,
 ]
 
-////////////
+//////////
 
 const martin = new Customer('Martin', 'martin@email.com')
 const sam = new Customer('Sam', 'sam@email.com')
@@ -39,7 +39,7 @@ const sarah = new Customer('Sarah', 'sarah@email.com')
 
 const customerRecord = [martin, sam, sarah]
 
-/////////// Interactions
+///////// Interactions
 sallySweet.addSkill(webDesign)
 sallySweet.addSkill(UXDesign)
 sallySweet.addSkill(animation)
@@ -52,6 +52,8 @@ farrahLee.addSkill(branding)
 
 sarah.inquireSkill(animation)
 sam.inquireSkill(typography)
+sam.inquireSkill(animation)
+
 
 martin.requestDesigner(webDesign, sallySweet)
 martin.requestDesigner(animation, sallySweet)
@@ -66,9 +68,16 @@ Database.save('skill.json', skillRecord)
 Database.save('designer.json', designerRecord)
 Database.save('customer.json', customerRecord)
 
-const loadedSkills = Database.load('skill.json')
-const loadedDesigners = Database.load('designer.json')
-const loadedCustomers = Database.load('customer.json')
-console.log(loadedSkills)
-console.log(loadedDesigners)
-console.log(loadedCustomers)
+// const loadedSkills = Database.load('skill.json')
+// const loadedDesigners = Database.load('designer.json')
+// const loadedCustomers = Database.load('customer.json')
+// console.log(loadedSkills)
+// console.log(loadedDesigners)
+// console.log(loadedCustomers)
+
+// const Database = require('./database')
+// const Skill = require('./skill')
+// const loadedFile = Database.load('skill.json')
+
+// const animation = new Skill(loadedFile.name, loadedFile.designers)
+// animation.printDesignersBySkill()
