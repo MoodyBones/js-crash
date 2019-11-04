@@ -1,9 +1,10 @@
 const Chalk = require('chalk')
 
 module.exports = class Skill {
-  constructor(name, designers = []) {
+  constructor(name, designers = [], id) {
     this.name = name
     this.designers = designers
+    this.id = id
   }
 
   // not sure about this..
@@ -13,11 +14,7 @@ module.exports = class Skill {
     this.designers.forEach(printName)
   }
 
-  static create({ name, designers }) {
-    const skill = new Skill(name, designers)
-
-    skill.designers = designers.map(Designers.create)
-
-    return skill
+  static create({ name, designers, id }) {
+    return new Skill(name, designers, id)
   }
 }
