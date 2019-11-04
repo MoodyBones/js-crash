@@ -25,7 +25,7 @@ module.exports = class Customer {
     // console.log('designer', designer.requests)
   }
 
-  static create({ name, email, inquiries, requests }) {
-    return new Customer(name, email, inquiries, requests)
+  static create({ name, email }) {
+    return new Customer(name, email)
   }
 }

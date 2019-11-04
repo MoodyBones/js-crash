@@ -15,7 +15,9 @@ module.exports = class Skill {
 
   static create({ name, designers }) {
     const skill = new Skill(name, designers)
+
     skill.designers = designers.map(Designers.create)
+
     return skill
   }
 }

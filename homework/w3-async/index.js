@@ -5,13 +5,15 @@ const Customer = require('./customer')
 const Database = require('./database')
 
 ////// Classes
+/////// Designer
 
 const sallySweet = new Designer('Sally Sweet', 'sallys@gmail.com')
 const farrahLee = new Designer('Farrah Lee', 'farrahl@gmail.com')
 const rosaJones = new Designer('Rosa Jones', 'rosaj@gmail.com')
 
 const designerRecord = [sallySweet, farrahLee, rosaJones]
-////////
+
+//////// Skill
 
 const webDesign = new Skill('Web Design')
 const typography = new Skill('Typography')
@@ -31,7 +33,7 @@ const skillRecord = [
   animation,
 ]
 
-//////////
+////////// Customer
 
 const martin = new Customer('Martin', 'martin@email.com')
 const sam = new Customer('Sam', 'sam@email.com')
@@ -40,6 +42,7 @@ const sarah = new Customer('Sarah', 'sarah@email.com')
 const customerRecord = [martin, sam, sarah]
 
 ///////// Interactions
+
 sallySweet.addSkill(webDesign)
 sallySweet.addSkill(UXDesign)
 sallySweet.addSkill(animation)
@@ -54,7 +57,6 @@ sarah.inquireSkill(animation)
 sam.inquireSkill(typography)
 sam.inquireSkill(animation)
 
-
 martin.requestDesigner(webDesign, sallySweet)
 martin.requestDesigner(animation, sallySweet)
 sam.requestDesigner(typography, rosaJones)
@@ -64,9 +66,13 @@ sarah.requestDesigner(branding, farrahLee)
 animation.printDesignersBySkill()
 webDesign.printDesignersBySkill()
 
+/////////////////////// SAVE
+
 Database.save('skill.json', skillRecord)
 Database.save('designer.json', designerRecord)
 Database.save('customer.json', customerRecord)
+
+/////////////////////// LOAD
 
 const loadedSkills = Database.load('skill.json')
 const loadedDesigners = Database.load('designer.json')
@@ -74,10 +80,3 @@ const loadedCustomers = Database.load('customer.json')
 console.log(loadedSkills)
 console.log(loadedDesigners)
 console.log(loadedCustomers)
-
-// const Database = require('./database')
-// const Skill = require('./skill')
-// const loadedFile = Database.load('skill.json')
-
-// const animation = new Skill(loadedFile.name, loadedFile.designers)
-// animation.printDesignersBySkill()

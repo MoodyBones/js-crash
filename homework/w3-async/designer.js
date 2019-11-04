@@ -12,7 +12,7 @@ module.exports = class Designer {
     skill.designers.push(this.name)
   }
 
-  static create({ name, email, skills, requests }) {
-    return new Designer(name, email, skills, requests)
+  static create({ name, email }) {
+    return new Designer(name, email)
   }
 }
