@@ -2,490 +2,73 @@
   {
     "name": "Martin",
     "email": "martin@email.com",
-    "inquiry": [],
-    "request": [
+    "inquiries": [],
+    "requests": [
       [
-        {
-          "name": "Web Design",
-          "designers": [
-            [
-              "Sally Sweet",
-              "sallys@gmail.com"
-            ]
-          ]
-        },
-        {
-          "name": "Sally Sweet",
-          "email": "sallys@gmail.com",
-          "skills": [
-            {
-              "name": "Web Design",
-              "designers": [
-                [
-                  "Sally Sweet",
-                  "sallys@gmail.com"
-                ]
-              ]
-            },
-            {
-              "name": "UX Design",
-              "designers": [
-                [
-                  "Sally Sweet",
-                  "sallys@gmail.com"
-                ]
-              ]
-            },
-            {
-              "name": "Animation",
-              "designers": [
-                [
-                  "Sally Sweet",
-                  "sallys@gmail.com"
-                ],
-                [
-                  "Rosa Jones",
-                  "rosaj@gmail.com"
-                ]
-              ]
-            }
-          ],
-          "requests": [
-            [
-              [
-                "Martin",
-                "martin@email.com"
-              ],
-              {
-                "name": "Web Design",
-                "designers": [
-                  [
-                    "Sally Sweet",
-                    "sallys@gmail.com"
-                  ]
-                ]
-              }
-            ],
-            [
-              [
-                "Martin",
-                "martin@email.com"
-              ],
-              {
-                "name": "Animation",
-                "designers": [
-                  [
-                    "Sally Sweet",
-                    "sallys@gmail.com"
-                  ],
-                  [
-                    "Rosa Jones",
-                    "rosaj@gmail.com"
-                  ]
-                ]
-              }
-            ]
-          ]
-        }
+        "Web Design",
+        [
+          "Sally Sweet",
+          "sallys@gmail.com"
+        ]
       ],
       [
-        {
-          "name": "Animation",
-          "designers": [
-            [
-              "Sally Sweet",
-              "sallys@gmail.com"
-            ],
-            [
-              "Rosa Jones",
-              "rosaj@gmail.com"
-            ]
-          ]
-        },
-        {
-          "name": "Sally Sweet",
-          "email": "sallys@gmail.com",
-          "skills": [
-            {
-              "name": "Web Design",
-              "designers": [
-                [
-                  "Sally Sweet",
-                  "sallys@gmail.com"
-                ]
-              ]
-            },
-            {
-              "name": "UX Design",
-              "designers": [
-                [
-                  "Sally Sweet",
-                  "sallys@gmail.com"
-                ]
-              ]
-            },
-            {
-              "name": "Animation",
-              "designers": [
-                [
-                  "Sally Sweet",
-                  "sallys@gmail.com"
-                ],
-                [
-                  "Rosa Jones",
-                  "rosaj@gmail.com"
-                ]
-              ]
-            }
-          ],
-          "requests": [
-            [
-              [
-                "Martin",
-                "martin@email.com"
-              ],
-              {
-                "name": "Web Design",
-                "designers": [
-                  [
-                    "Sally Sweet",
-                    "sallys@gmail.com"
-                  ]
-                ]
-              }
-            ],
-            [
-              [
-                "Martin",
-                "martin@email.com"
-              ],
-              {
-                "name": "Animation",
-                "designers": [
-                  [
-                    "Sally Sweet",
-                    "sallys@gmail.com"
-                  ],
-                  [
-                    "Rosa Jones",
-                    "rosaj@gmail.com"
-                  ]
-                ]
-              }
-            ]
-          ]
-        }
+        "Animation",
+        [
+          "Sally Sweet",
+          "sallys@gmail.com"
+        ]
       ]
     ]
   },
   {
     "name": "Sam",
     "email": "sam@email.com",
-    "inquiry": [
+    "inquiries": [
+      "Typography",
       [
-        {
-          "name": "Typography",
-          "designers": [
-            [
-              "Rosa Jones",
-              "rosaj@gmail.com"
-            ],
-            [
-              "Farrah Lee",
-              "farrahl@gmail.com"
-            ]
-          ]
-        },
-        [
-          [
-            "Rosa Jones",
-            "rosaj@gmail.com"
-          ],
-          [
-            "Farrah Lee",
-            "farrahl@gmail.com"
-          ]
-        ]
+        "Rosa Jones",
+        "Farrah Lee"
+      ],
+      "Animation",
+      [
+        "Sally Sweet",
+        "Rosa Jones"
       ]
     ],
-    "request": [
+    "requests": [
       [
-        {
-          "name": "Typography",
-          "designers": [
-            [
-              "Rosa Jones",
-              "rosaj@gmail.com"
-            ],
-            [
-              "Farrah Lee",
-              "farrahl@gmail.com"
-            ]
-          ]
-        },
-        {
-          "name": "Rosa Jones",
-          "email": "rosaj@gmail.com",
-          "skills": [
-            {
-              "name": "Animation",
-              "designers": [
-                [
-                  "Sally Sweet",
-                  "sallys@gmail.com"
-                ],
-                [
-                  "Rosa Jones",
-                  "rosaj@gmail.com"
-                ]
-              ]
-            },
-            {
-              "name": "Typography",
-              "designers": [
-                [
-                  "Rosa Jones",
-                  "rosaj@gmail.com"
-                ],
-                [
-                  "Farrah Lee",
-                  "farrahl@gmail.com"
-                ]
-              ]
-            },
-            {
-              "name": "UI Design",
-              "designers": [
-                [
-                  "Rosa Jones",
-                  "rosaj@gmail.com"
-                ]
-              ]
-            }
-          ],
-          "requests": [
-            [
-              [
-                "Sam",
-                "sam@email.com"
-              ],
-              {
-                "name": "Typography",
-                "designers": [
-                  [
-                    "Rosa Jones",
-                    "rosaj@gmail.com"
-                  ],
-                  [
-                    "Farrah Lee",
-                    "farrahl@gmail.com"
-                  ]
-                ]
-              }
-            ],
-            [
-              [
-                "Sam",
-                "sam@email.com"
-              ],
-              {
-                "name": "UI Design",
-                "designers": [
-                  [
-                    "Rosa Jones",
-                    "rosaj@gmail.com"
-                  ]
-                ]
-              }
-            ]
-          ]
-        }
+        "Typography",
+        [
+          "Rosa Jones",
+          "rosaj@gmail.com"
+        ]
       ],
       [
-        {
-          "name": "UI Design",
-          "designers": [
-            [
-              "Rosa Jones",
-              "rosaj@gmail.com"
-            ]
-          ]
-        },
-        {
-          "name": "Rosa Jones",
-          "email": "rosaj@gmail.com",
-          "skills": [
-            {
-              "name": "Animation",
-              "designers": [
-                [
-                  "Sally Sweet",
-                  "sallys@gmail.com"
-                ],
-                [
-                  "Rosa Jones",
-                  "rosaj@gmail.com"
-                ]
-              ]
-            },
-            {
-              "name": "Typography",
-              "designers": [
-                [
-                  "Rosa Jones",
-                  "rosaj@gmail.com"
-                ],
-                [
-                  "Farrah Lee",
-                  "farrahl@gmail.com"
-                ]
-              ]
-            },
-            {
-              "name": "UI Design",
-              "designers": [
-                [
-                  "Rosa Jones",
-                  "rosaj@gmail.com"
-                ]
-              ]
-            }
-          ],
-          "requests": [
-            [
-              [
-                "Sam",
-                "sam@email.com"
-              ],
-              {
-                "name": "Typography",
-                "designers": [
-                  [
-                    "Rosa Jones",
-                    "rosaj@gmail.com"
-                  ],
-                  [
-                    "Farrah Lee",
-                    "farrahl@gmail.com"
-                  ]
-                ]
-              }
-            ],
-            [
-              [
-                "Sam",
-                "sam@email.com"
-              ],
-              {
-                "name": "UI Design",
-                "designers": [
-                  [
-                    "Rosa Jones",
-                    "rosaj@gmail.com"
-                  ]
-                ]
-              }
-            ]
-          ]
-        }
+        "UI Design",
+        [
+          "Rosa Jones",
+          "rosaj@gmail.com"
+        ]
       ]
     ]
   },
   {
     "name": "Sarah",
     "email": "sarah@email.com",
-    "inquiry": [
+    "inquiries": [
+      "Animation",
       [
-        {
-          "name": "Animation",
-          "designers": [
-            [
-              "Sally Sweet",
-              "sallys@gmail.com"
-            ],
-            [
-              "Rosa Jones",
-              "rosaj@gmail.com"
-            ]
-          ]
-        },
-        [
-          [
-            "Sally Sweet",
-            "sallys@gmail.com"
-          ],
-          [
-            "Rosa Jones",
-            "rosaj@gmail.com"
-          ]
-        ]
+        "Sally Sweet",
+        "Rosa Jones"
       ]
     ],
-    "request": [
+    "requests": [
       [
-        {
-          "name": "Branding",
-          "designers": [
-            [
-              "Farrah Lee",
-              "farrahl@gmail.com"
-            ]
-          ]
-        },
-        {
-          "name": "Farrah Lee",
-          "email": "farrahl@gmail.com",
-          "skills": [
-            {
-              "name": "Typography",
-              "designers": [
-                [
-                  "Rosa Jones",
-                  "rosaj@gmail.com"
-                ],
-                [
-                  "Farrah Lee",
-                  "farrahl@gmail.com"
-                ]
-              ]
-            },
-            {
-              "name": "Print Design",
-              "designers": [
-                [
-                  "Farrah Lee",
-                  "farrahl@gmail.com"
-                ]
-              ]
-            },
-            {
-              "name": "Branding",
-              "designers": [
-                [
-                  "Farrah Lee",
-                  "farrahl@gmail.com"
-                ]
-              ]
-            }
-          ],
-          "requests": [
-            [
-              [
-                "Sarah",
-                "sarah@email.com"
-              ],
-              {
-                "name": "Branding",
-                "designers": [
-                  [
-                    "Farrah Lee",
-                    "farrahl@gmail.com"
-                  ]
-                ]
-              }
-            ]
-          ]
-        }
+        "Branding",
+        [
+          "Farrah Lee",
+          "farrahl@gmail.com"
+        ]
       ]
     ]
   }

@@ -3,39 +3,24 @@
     "name": "Sally Sweet",
     "email": "sallys@gmail.com",
     "skills": [
-      {
-        "name": "Web Design",
-        "designers": [["Sally Sweet", "sallys@gmail.com"]]
-      },
-      {
-        "name": "UX Design",
-        "designers": [["Sally Sweet", "sallys@gmail.com"]]
-      },
-      {
-        "name": "Animation",
-        "designers": [
-          ["Sally Sweet", "sallys@gmail.com"],
-          ["Rosa Jones", "rosaj@gmail.com"]
-        ]
-      }
+      "Web Design",
+      "UX Design",
+      "Animation"
     ],
     "requests": [
       [
-        ["Martin", "martin@email.com"],
-        {
-          "name": "Web Design",
-          "designers": [["Sally Sweet", "sallys@gmail.com"]]
-        }
+        "Web Design",
+        [
+          "Martin",
+          "martin@email.com"
+        ]
       ],
       [
-        ["Martin", "martin@email.com"],
-        {
-          "name": "Animation",
-          "designers": [
-            ["Sally Sweet", "sallys@gmail.com"],
-            ["Rosa Jones", "rosaj@gmail.com"]
-          ]
-        }
+        "Animation",
+        [
+          "Martin",
+          "martin@email.com"
+        ]
       ]
     ]
   },
@@ -43,29 +28,17 @@
     "name": "Farrah Lee",
     "email": "farrahl@gmail.com",
     "skills": [
-      {
-        "name": "Typography",
-        "designers": [
-          ["Rosa Jones", "rosaj@gmail.com"],
-          ["Farrah Lee", "farrahl@gmail.com"]
-        ]
-      },
-      {
-        "name": "Print Design",
-        "designers": [["Farrah Lee", "farrahl@gmail.com"]]
-      },
-      {
-        "name": "Branding",
-        "designers": [["Farrah Lee", "farrahl@gmail.com"]]
-      }
+      "Typography",
+      "Print Design",
+      "Branding"
     ],
     "requests": [
       [
-        ["Sarah", "sarah@email.com"],
-        {
-          "name": "Branding",
-          "designers": [["Farrah Lee", "farrahl@gmail.com"]]
-        }
+        "Branding",
+        [
+          "Sarah",
+          "sarah@email.com"
+        ]
       ]
     ]
   },
@@ -73,42 +46,24 @@
     "name": "Rosa Jones",
     "email": "rosaj@gmail.com",
     "skills": [
-      {
-        "name": "Animation",
-        "designers": [
-          ["Sally Sweet", "sallys@gmail.com"],
-          ["Rosa Jones", "rosaj@gmail.com"]
-        ]
-      },
-      {
-        "name": "Typography",
-        "designers": [
-          ["Rosa Jones", "rosaj@gmail.com"],
-          ["Farrah Lee", "farrahl@gmail.com"]
-        ]
-      },
-      {
-        "name": "UI Design",
-        "designers": [["Rosa Jones", "rosaj@gmail.com"]]
-      }
+      "Animation",
+      "Typography",
+      "UI Design"
     ],
     "requests": [
       [
-        ["Sam", "sam@email.com"],
-        {
-          "name": "Typography",
-          "designers": [
-            ["Rosa Jones", "rosaj@gmail.com"],
-            ["Farrah Lee", "farrahl@gmail.com"]
-          ]
-        }
+        "Typography",
+        [
+          "Sam",
+          "sam@email.com"
+        ]
       ],
       [
-        ["Sam", "sam@email.com"],
-        {
-          "name": "UI Design",
-          "designers": [["Rosa Jones", "rosaj@gmail.com"]]
-        }
+        "UI Design",
+        [
+          "Sam",
+          "sam@email.com"
+        ]
       ]
     ]
   }
