@@ -42,5 +42,12 @@
       "Sally Sweet",
       "Rosa Jones"
     ]
+  },
+  {
+    "name": "Photography",
+    "designers": [
+      "Conor Rad",
+      "Arne Adventure"
+    ]
   }
 ]
