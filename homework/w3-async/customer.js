@@ -19,8 +19,8 @@ module.exports = class Customer {
   }
 
   requestDesigner(skill, designer) {
-    this.requests.push(skill.name, designer.name, designer.email)
-    designer.requests.push(skill.name, this.name, this.email)
+    this.requests.push([skill.name, [designer.name, designer.email]])
+    designer.requests.push([skill.name, [this.name, this.email]])
     // console.log('customer', this.requests)
     // console.log('designer', designer.requests)
   }
