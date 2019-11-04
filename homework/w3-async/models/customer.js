@@ -1,19 +1,17 @@
-const Chalk = require('chalk')
-
 module.exports = class Customer {
-  constructor(name, email, inquiries = [], requests = []) {
+  constructor(name, email, inquiries = [], requests = [], id) {
     this.name = name
     this.email = email
     this.inquiries = inquiries
     this.requests = requests
+    this.id = id
   }
 
   inquireSkill(skill) {
     // return a list of designers with that skill
-    // use sort to on list of returned designers
+    // use sort to on list of returned designers, maybe later
     // const sortDesigners = skill.designers.sort((a, b) => (a > b ? 1 : -1))
     this.inquiries.push(skill.name, [skill.designers])
-
     // console.log(skill.name, sortDesigners) // testing
     // console.log('inquiry', this.name, this.inquiries)
   }
@@ -25,7 +23,7 @@ module.exports = class Customer {
     // console.log('designer', designer.requests)
   }
 
-  static create({ name, email }) {
-    return new Customer(name, email)
+  static create({ name, email, inquiries, requests, id }) {
+    return new Customer(name, email, inquiries, requests, id)
   }
 }
