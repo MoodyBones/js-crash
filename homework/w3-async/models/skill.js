@@ -7,11 +7,11 @@ module.exports = class Skill {
     this.id = id
   }
 
-  // not sure about this..
   printDesignersBySkill() {
-    const printName = person => console.log(Chalk.blue(person))
-    console.log(`The following designers have experience in ${this.name}:`)
-    this.designers.forEach(printName)
+    console.log(`The following designers have experience in ${Chalk.green(this.name)}:`)
+    return this.designers.forEach(designer => {
+      console.log(Chalk.blue(designer.name))
+    })
   }
 
   static create({ name, designers, id }) {

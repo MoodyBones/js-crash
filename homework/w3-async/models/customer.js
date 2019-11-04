@@ -9,18 +9,18 @@ module.exports = class Customer {
 
   inquireSkill(skill) {
     // return a list of designers with that skill
-    // use sort to on list of returned designers, maybe later
-    // const sortDesigners = skill.designers.sort((a, b) => (a > b ? 1 : -1))
-    this.inquiries.push(skill.name, [skill.designers])
-    // console.log(skill.name, sortDesigners) // testing
+
+    this.inquiries.push(skill.name, skill.designers)
     // console.log('inquiry', this.name, this.inquiries)
   }
 
   requestDesigner(skill, designer) {
+    // return the designer and email
+
     this.requests.push(skill.name, [designer.name, designer.email])
     designer.requests.push(skill.name, [this.name, this.email])
-    // console.log('customer', this.requests)
-    // console.log('designer', designer.requests)
+    // console.log('customer', this.requests) // testing
+    // console.log('designer', designer.requests) // testing
   }
 
   static create({ name, email, inquiries, requests, id }) {
