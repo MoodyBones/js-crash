@@ -1,82 +1,119 @@
 // Untitled Designer Database
-const Designer = require('./designer')
-const Skill = require('./skill')
-const Customer = require('./customer')
-const Database = require('./database')
+const Designer = require('./models/designer')
+const Skill = require('./models/skill')
+const Customer = require('./models/customer')
+const DesignerService = require('./services/designer-service')
+const SkillService = require('./services/skill-service')
+const CustomerService = require('./services/customer-service')
+const Chalk = require('chalk')
 
-////// Classes
-/////// Designer
+console.log('Hello World!! this is Mel Jones')
 
-const sallySweet = new Designer('Sally Sweet', 'sallys@gmail.com')
-const farrahLee = new Designer('Farrah Lee', 'farrahl@gmail.com')
-const rosaJones = new Designer('Rosa Jones', 'rosaj@gmail.com')
+async function main() {
+  ////////// add Designers
+  const sallySweet = new Designer('Sally Sweet', 'sallys@gmail.com')
+  const farrahLee = new Designer('Farrah Lee', 'farrahl@gmail.com')
+  const rosaJones = new Designer('Rosa Jones', 'rosaj@gmail.com')
 
-const designerRecord = [sallySweet, farrahLee, rosaJones]
+  ////////// add Skills
+  const webDesign = new Skill('Web Design')
+  const typography = new Skill('Typography')
+  const branding = new Skill('Branding')
+  const printDesign = new Skill('Print Design')
+  const uiDesign = new Skill('UI Design')
+  const uxDesign = new Skill('UX Design')
+  const animation = new Skill('Animation')
 
-//////// Skill
+  ////// and some interactions
+  sallySweet.addSkill(webDesign)
+  sallySweet.addSkill(uxDesign)
+  sallySweet.addSkill(animation)
+  rosaJones.addSkill(animation)
+  rosaJones.addSkill(typography)
+  rosaJones.addSkill(uiDesign)
+  farrahLee.addSkill(typography)
+  farrahLee.addSkill(printDesign)
+  farrahLee.addSkill(branding)
 
-const webDesign = new Skill('Web Design')
-const typography = new Skill('Typography')
-const branding = new Skill('Branding')
-const printDesign = new Skill('Print Design')
-const UIDesign = new Skill('UI Design')
-const UXDesign = new Skill('UX Design')
-const animation = new Skill('Animation')
+  //////// push new designers to DB
+  await DesignerService.add(sallySweet)
+  await DesignerService.add(farrahLee)
+  await DesignerService.add(rosaJones)
 
-const skillRecord = [
-  webDesign,
-  typography,
-  branding,
-  printDesign,
-  UIDesign,
-  UXDesign,
-  animation,
-]
+  //////// test DesignerService
+  const designers = await DesignerService.findAll()
 
-////////// Customer
+  console.log(designers)
 
-const martin = new Customer('Martin', 'martin@email.com')
-const sam = new Customer('Sam', 'sam@email.com')
-const sarah = new Customer('Sarah', 'sarah@email.com')
+  animation.printDesignersBySkill()
+  webDesign.printDesignersBySkill()
 
-const customerRecord = [martin, sam, sarah]
+  //////// push new skills to DB
+  await SkillService.add(webDesign)
+  await SkillService.add(typography)
+  await SkillService.add(branding)
+  await SkillService.add(printDesign)
+  await SkillService.add(uiDesign)
+  await SkillService.add(uxDesign)
+  await SkillService.add(animation)
 
-///////// Interactions
+  ///////// test SkillService
+  const skills = await SkillService.findAll()
 
-sallySweet.addSkill(webDesign)
-sallySweet.addSkill(UXDesign)
-sallySweet.addSkill(animation)
-rosaJones.addSkill(animation)
-rosaJones.addSkill(typography)
-rosaJones.addSkill(UIDesign)
-farrahLee.addSkill(typography)
-farrahLee.addSkill(printDesign)
-farrahLee.addSkill(branding)
+  console.log(skills)
 
-sarah.inquireSkill(animation)
-sam.inquireSkill(typography)
-sam.inquireSkill(animation)
+  //////// test adding additional new designers and skills
+  const conor = new Designer('Conor Rad', 'conor@email.com')
+  const arne = new Designer('Arne Adventure', 'arne@email.com')
 
-martin.requestDesigner(webDesign, sallySweet)
-martin.requestDesigner(animation, sallySweet)
-sam.requestDesigner(typography, rosaJones)
-sam.requestDesigner(UIDesign, rosaJones)
-sarah.requestDesigner(branding, farrahLee)
+  await DesignerService.add(conor)
+  await DesignerService.add(arne)
 
-animation.printDesignersBySkill()
-webDesign.printDesignersBySkill()
+  const designersMore = await DesignerService.findAll()
 
-/////////////////////// SAVE
+  console.log(designersMore)
 
-Database.save('skill.json', skillRecord)
-Database.save('designer.json', designerRecord)
-Database.save('customer.json', customerRecord)
+  const photography = new Skill('Photography')
+  await SkillService.add(photography)
 
-/////////////////////// LOAD
+  conor.addSkill(photography)
+  arne.addSkill(photography)
 
-const loadedSkills = Database.load('skill.json')
-const loadedDesigners = Database.load('designer.json')
-const loadedCustomers = Database.load('customer.json')
-console.log(loadedSkills)
-console.log(loadedDesigners)
-console.log(loadedCustomers)
+  photography.printDesignersBySkill()
+
+  ///////////// add Customers
+  const martin = new Customer('Martin', 'martin@email.com')
+  const sam = new Customer('Sam', 'sam@email.com')
+  const sarah = new Customer('Sarah', 'sarah@email.com')
+
+  await CustomerService.add(martin)
+  await CustomerService.add(sam)
+  await CustomerService.add(sarah)
+
+  sarah.inquireSkill(animation)
+  sam.inquireSkill(typography)
+  sam.inquireSkill(animation)
+
+  martin.requestDesigner(webDesign, sallySweet)
+  martin.requestDesigner(animation, sallySweet)
+  sam.requestDesigner(typography, rosaJones)
+  sam.requestDesigner(uiDesign, rosaJones)
+  sarah.requestDesigner(branding, farrahLee)
+
+  //////// test CustomerService
+  const customers = await CustomerService.findAll()
+
+  // console.log(customers)
+
+  console.log('it should say Martin..', Chalk.red(customers[0].name))
+
+  await CustomerService.del(1)
+
+  const testDeletedCust = await CustomerService.findAll()
+
+  console.log('it should say Sam..', Chalk.red(testDeletedCust[0].name))
+
+
+}
+
+main()

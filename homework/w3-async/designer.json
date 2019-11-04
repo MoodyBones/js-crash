@@ -56,5 +56,21 @@
         "sam@email.com"
       ]
     ]
+  },
+  {
+    "name": "Conor Rad",
+    "email": "conor@email.com",
+    "skills": [
+      "Photography"
+    ],
+    "requests": []
+  },
+  {
+    "name": "Arne Adventure",
+    "email": "arne@email.com",
+    "skills": [
+      "Photography"
+    ],
+    "requests": []
   }
 ]
