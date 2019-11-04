@@ -8,19 +8,15 @@
       "Animation"
     ],
     "requests": [
+      "Web Design",
       [
-        "Web Design",
-        [
-          "Martin",
-          "martin@email.com"
-        ]
+        "Martin",
+        "martin@email.com"
       ],
+      "Animation",
       [
-        "Animation",
-        [
-          "Martin",
-          "martin@email.com"
-        ]
+        "Martin",
+        "martin@email.com"
       ]
     ]
   },
@@ -33,12 +29,10 @@
       "Branding"
     ],
     "requests": [
+      "Branding",
       [
-        "Branding",
-        [
-          "Sarah",
-          "sarah@email.com"
-        ]
+        "Sarah",
+        "sarah@email.com"
       ]
     ]
   },
@@ -51,19 +45,15 @@
       "UI Design"
     ],
     "requests": [
+      "Typography",
       [
-        "Typography",
-        [
-          "Sam",
-          "sam@email.com"
-        ]
+        "Sam",
+        "sam@email.com"
       ],
+      "UI Design",
       [
-        "UI Design",
-        [
-          "Sam",
-          "sam@email.com"
-        ]
+        "Sam",
+        "sam@email.com"
       ]
     ]
   }

@@ -4,19 +4,15 @@
     "email": "martin@email.com",
     "inquiries": [],
     "requests": [
+      "Web Design",
       [
-        "Web Design",
-        [
-          "Sally Sweet",
-          "sallys@gmail.com"
-        ]
+        "Sally Sweet",
+        "sallys@gmail.com"
       ],
+      "Animation",
       [
-        "Animation",
-        [
-          "Sally Sweet",
-          "sallys@gmail.com"
-        ]
+        "Sally Sweet",
+        "sallys@gmail.com"
       ]
     ]
   },
@@ -26,29 +22,29 @@
     "inquiries": [
       "Typography",
       [
-        "Rosa Jones",
-        "Farrah Lee"
+        [
+          "Rosa Jones",
+          "Farrah Lee"
+        ]
       ],
       "Animation",
       [
-        "Sally Sweet",
-        "Rosa Jones"
+        [
+          "Sally Sweet",
+          "Rosa Jones"
+        ]
       ]
     ],
     "requests": [
+      "Typography",
       [
-        "Typography",
-        [
-          "Rosa Jones",
-          "rosaj@gmail.com"
-        ]
+        "Rosa Jones",
+        "rosaj@gmail.com"
       ],
+      "UI Design",
       [
-        "UI Design",
-        [
-          "Rosa Jones",
-          "rosaj@gmail.com"
-        ]
+        "Rosa Jones",
+        "rosaj@gmail.com"
       ]
     ]
   },
@@ -58,17 +54,17 @@
     "inquiries": [
       "Animation",
       [
-        "Sally Sweet",
-        "Rosa Jones"
+        [
+          "Sally Sweet",
+          "Rosa Jones"
+        ]
       ]
     ],
     "requests": [
+      "Branding",
       [
-        "Branding",
-        [
-          "Farrah Lee",
-          "farrahl@gmail.com"
-        ]
+        "Farrah Lee",
+        "farrahl@gmail.com"
       ]
     ]
   }
