@@ -1,6 +1,6 @@
 extends layout
 
 block content
-  h1 The number of designers is #{designer.length}
+  h1 The number of designers is #{designers.length}
   each designer in designers 
-    h4 #{designer.name} #{designer.email}
+    h4 #{designer.name} #{designer.email} id:#{designer.id}
