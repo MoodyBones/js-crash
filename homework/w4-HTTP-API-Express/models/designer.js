@@ -9,10 +9,10 @@ module.exports = class Designer {
 
   addSkill(skill) {
     // console.log(this.name, skill.name) //testing
-    // this.skills.push(skill.name)
-    this.skills.push(skill)
-    // skill.designers.push(this.name)
-    skill.designers.push(this)
+    this.skills.push(skill.name)
+    // this.skills.push(skill)
+    skill.designers.push(this.name)
+    // skill.designers.push(this)
   }
 
   static create({ name, email, skills, requests, id }) {
