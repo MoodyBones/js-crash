@@ -1,0 +1,6 @@
+extends layout
+
+block content
+  h1 The number of designers is #{designer.length}
+  each designer in designers 
+    h4 #{designer.name} #{designer.email}
