@@ -1,0 +1,53 @@
+[
+  {
+    "name": "Web Design",
+    "designers": [
+      "Sally Sweet"
+    ]
+  },
+  {
+    "name": "Typography",
+    "designers": [
+      "Rosa Jones",
+      "Farrah Lee"
+    ]
+  },
+  {
+    "name": "Branding",
+    "designers": [
+      "Farrah Lee"
+    ]
+  },
+  {
+    "name": "Print Design",
+    "designers": [
+      "Farrah Lee"
+    ]
+  },
+  {
+    "name": "UI Design",
+    "designers": [
+      "Rosa Jones"
+    ]
+  },
+  {
+    "name": "UX Design",
+    "designers": [
+      "Sally Sweet"
+    ]
+  },
+  {
+    "name": "Animation",
+    "designers": [
+      "Sally Sweet",
+      "Rosa Jones"
+    ]
+  },
+  {
+    "name": "Photography",
+    "designers": [
+      "Conor Rad",
+      "Arne Adventure"
+    ]
+  }
+]

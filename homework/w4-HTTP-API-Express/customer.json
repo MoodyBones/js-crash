@@ -1,0 +1,71 @@
+[
+  {
+    "name": "Martin",
+    "email": "martin@email.com",
+    "inquiries": [],
+    "requests": [
+      "Web Design",
+      [
+        "Sally Sweet",
+        "sallys@gmail.com"
+      ],
+      "Animation",
+      [
+        "Sally Sweet",
+        "sallys@gmail.com"
+      ]
+    ]
+  },
+  {
+    "name": "Sam",
+    "email": "sam@email.com",
+    "inquiries": [
+      "Typography",
+      [
+        [
+          "Rosa Jones",
+          "Farrah Lee"
+        ]
+      ],
+      "Animation",
+      [
+        [
+          "Sally Sweet",
+          "Rosa Jones"
+        ]
+      ]
+    ],
+    "requests": [
+      "Typography",
+      [
+        "Rosa Jones",
+        "rosaj@gmail.com"
+      ],
+      "UI Design",
+      [
+        "Rosa Jones",
+        "rosaj@gmail.com"
+      ]
+    ]
+  },
+  {
+    "name": "Sarah",
+    "email": "sarah@email.com",
+    "inquiries": [
+      "Animation",
+      [
+        [
+          "Sally Sweet",
+          "Rosa Jones"
+        ]
+      ]
+    ],
+    "requests": [
+      "Branding",
+      [
+        "Farrah Lee",
+        "farrahl@gmail.com"
+      ]
+    ]
+  }
+]
