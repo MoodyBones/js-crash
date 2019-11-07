@@ -117,13 +117,20 @@
 // main()
 
 const express = require('express')
-// const DesignerService = require('./services/designer-service')
+const DesignerService = require('./services/designer-service')
 
 const app = express()
 
-app.get('/', (req, res) => {
-  res.send('Hello')  
+app.set('view engine', 'pug')
 
+app.get('/', (req, res) => {
+  // res.send('Hello')  
+  res.render('index')
+})
+
+app.get('/designer/all', async (req, res) => {
+  const designers = await DesignerService.findAll()
+  res.render('')
 })
 
 app.listen(3000, () => {
