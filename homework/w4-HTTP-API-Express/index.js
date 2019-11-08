@@ -35,22 +35,16 @@ app.get('/designer/:id', async (req, res) => {
   res.send(designer)
 })
 
-app.post('/person', async (req, res) => {
-  console.log(req.body)
-  // !!! Error in chrome devtools console when I enter: 
-  // axios.post('/designer', { name: 'Mel', email: 'mel@gmail.com' }).then(console.log)
-
-  // Console returns:
-  // [[PromiseStatus]]: "rejected"
-  // [[PromiseValue]]: Error: Request failed with status code 404 at e.exports
-
-  // const designer = await DesignerService.add(req.body)
-  // res.send(designer)
+app.post('/designer', async (req, res) => {
+  // console.log(req.body)
+  const designer = await DesignerService.add(req.body)
+  res.send(designer)
 })
 
-// app.delete('/designer/:id', async (req, res) => {
-
-// })
+app.delete('/designer/:id', async (req, res) => {
+  await DesignerService.del(req.params.id)
+  res.send('ok')
+})
 
 app.listen(3000, () => {
   console.log('Server listening')
