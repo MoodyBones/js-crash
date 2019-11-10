@@ -1,6 +1,10 @@
 extends layout
 
 block content
-  h1 The number of designers is #{designers.length}
-  each designer in designers 
-    h4 #{designer.name} #{designer.email} id:#{designer.id}
+    h2 #{title}
+    h3 We have #{designers.length} #{title} available!
+    div(class="designer-list") 
+      each designer in designers 
+        span #{designer.id}) 
+        span #{designer.name} 
+        span #{designer.email} 

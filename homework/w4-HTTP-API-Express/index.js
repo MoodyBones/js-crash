@@ -13,11 +13,14 @@
 const express = require('express')
 const DesignerService = require('./services/designer-service')
 const bodyParser = require('body-parser')
+const path = require('path')
 
 const app = express()
 
 app.use(bodyParser.json())
 app.set('view engine', 'pug')
+
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/', (req, res) => {
   // res.send('Hello')
@@ -26,7 +29,7 @@ app.get('/', (req, res) => {
 
 app.get('/designer/all', async (req, res) => {
   const designers = await DesignerService.findAll()
-  res.render('designer', { designers: designers })
+  res.render('designer', { title: 'Designers', designers: designers })
 })
 
 app.get('/designer/:id', async (req, res) => {
