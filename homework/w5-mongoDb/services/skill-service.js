@@ -1,10 +1,8 @@
-const BaseService = require('./base-service')
-const SkillModel = require('../models/skill')
+const BaseService = require("./base-service")
+const SkillModel = require("../models/skill")
 
 class SkillService extends BaseService {
-  constructor() {
-    super(SkillModel, `${__dirname}/../skill-database.json`)
-  }
+  model = SkillModel
 }
 
-module.exports = new SkillService
+module.exports = new SkillService()
