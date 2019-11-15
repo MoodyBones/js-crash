@@ -1,9 +1,14 @@
-const BaseService = require('./base-service')
-const DesignerModel = require('../models/designer')
+const BaseService = require("./base-service")
+const DesignerModel = require("../models/designer")
 
 class DesignerService extends BaseService {
-  constructor() {
-    super(DesignerModel, `${__dirname}/../designer-database.json`)
+  model = DesignerModel
+
+  async addSkill(skill, designer) {
+    designer.skills.push(skill)
+    skill.designers.push(designer)
+    await designer.save()
+    await skill.save()
   }
 }
 
