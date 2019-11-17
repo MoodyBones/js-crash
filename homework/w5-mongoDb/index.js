@@ -9,11 +9,11 @@
 
 // console.log('Hello World!! this is Mel Jones')
 
-///////// WEEK 4
+// /////// WEEK 4
 const express = require('express')
-const DesignerService = require('./services/designer-service')
 const bodyParser = require('body-parser')
 const path = require('path')
+const DesignerService = require('./services/designer-service')
 
 const app = express()
 
@@ -29,11 +29,11 @@ app.get('/', (req, res) => {
 
 app.get('/designer/all', async (req, res) => {
   const designers = await DesignerService.findAll()
-  res.render('designer', { title: 'Designers', designers: designers })
+  res.render('designer', { title: 'Designers', designers })
 })
 
 app.get('/designer/:id', async (req, res) => {
-  const id = req.params.id
+  const {id} = req.params
   const designer = await DesignerService.find(id)
   res.send(designer)
 })

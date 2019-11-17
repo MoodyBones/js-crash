@@ -1,4 +1,4 @@
-const mongoose = require("mongoose")
+const mongoose = require('mongoose')
 
 const CustomerSchema = new mongoose.Schema({
   name: {
@@ -26,9 +26,9 @@ const CustomerSchema = new mongoose.Schema({
 //   })
 // }
 
-CustomerSchema.plugin(require("mongoose-autopopulate"))
+CustomerSchema.plugin(require('mongoose-autopopulate'))
 
-const CustomerModel = mongoose.model("Customer", CustomerSchema)
+const CustomerModel = mongoose.model('Customer', CustomerSchema)
 
 module.exports = CustomerModel
 
