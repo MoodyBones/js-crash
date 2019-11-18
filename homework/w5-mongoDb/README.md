@@ -21,6 +21,9 @@ delete designer
 axios.delete('/designer/6').then(console.log)
 
 
+add skill
+axios.post('/skill', { name: 'Web Design'}).then(console.log)
+
 
 
 add skill to designer

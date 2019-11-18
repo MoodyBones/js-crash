@@ -3,7 +3,6 @@ const express = require('express')
 const router = express.Router()
 
 const DesignerService = require('../services/designer-service')
-const SkillService = require('../services/skill-service')
 
 router.get('/all', async (req, res) => {
   const people = await DesignerService.findAll()
@@ -22,14 +21,6 @@ router.post('/', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   const user = await DesignerService.del(req.params.id)
-  res.send(user)
-})
-
-router.post('/:id/skills', async (req, res) => {
-  const user = await DesignerService.find(req.params.id)
-  const skill = await SkillService.find(req.body.skill)
-  await DesignerService.addSkill(user, skill)
-
   res.send(user)
 })
 
