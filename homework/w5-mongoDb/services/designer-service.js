@@ -4,9 +4,9 @@ const DesignerModel = require('../models/designer')
 class DesignerService extends BaseService {
   model = DesignerModel
 
-  async addSkill(skill) {
-    this.skills.push(skill)
-    skill.designers.push(this)
+  async addSkill(designer, skill) {
+    designer.skills.push(skill)
+    skill.designers.push(designer)
     await this.save()
     await skill.save()
   }
