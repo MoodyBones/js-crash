@@ -11,6 +11,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 .app-container {
   display: grid;
@@ -27,6 +28,15 @@ body {
 nav {
   display: flex;
   justify-content: flex-end;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  padding-left: 1rem;
+  list-style: none;
 }
 
 header {
@@ -47,7 +57,7 @@ h1 {
 
 h2 {
   margin-top: 3.5rem;
-  /* font-weight: 400; */
+  font-weight: 400;
   text-transform: uppercase;
   font-style: italic;
 }
@@ -57,21 +67,6 @@ h3 {
   margin: 3rem 0;
 }
 
-ion-icon {
-  color: var(--color-white-ish);
-}
-
-.designer-list {
-  margin: 2rem 0;
-  display: grid;
-  grid-gap: 1em;
-  grid-template-columns: auto 1fr 1fr;
-  grid-template-rows: auto;
-}
-
-.designer-item {
-  margin: 2rem 0;
-}
 
 footer {
   border-top: 1px solid var(--color-white-ish);
