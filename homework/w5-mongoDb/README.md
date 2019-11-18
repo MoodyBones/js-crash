@@ -3,9 +3,9 @@
 
 test data
 add new designer
-axios.post('/designer', { name: 'Mel', email: 'mel@gmail.com', website: 'meljones.me', city: 'Berlin' }).then(console.log)`
+```axios.post('/designer', { name: 'Mel', email: 'mel@gmail.com', website: 'meljones.me', city: 'Berlin' }).then(console.log)
 
-axios.post('/designer', { name: 'Sally', email: 'sallysweet@email.com', website: 'sally.sweet', city: 'Lisbon' }).then(console.log)
+axios.post('/designer', { name: 'Sally', email: 'sallysweet@email.com', website: 'sally.sweet', city: 'Lisbon' }).then(console.log)`
 
 axios.post('/designer', { name: 'Farrah Lee', email: 'farrah@email.com', website: 'farrahlee.com', city: 'Berlin' }).then(console.log)
 
@@ -13,21 +13,21 @@ axios.post('/designer', { name: 'Rosa Jones', email: 'rosa@email.com', website: 
 
 axios.post('/designer', { name: 'Conor', email: 'conor@gmail.com', website: 'conor.com', city: 'Berlin' }).then(console.log)
 
-axios.post('/designer', { name: 'Arne', email: 'arne@gmail.com', website: 'arne.com', city: 'Amsterdam' }).then(console.log)
+axios.post('/designer', { name: 'Arne', email: 'arne@gmail.com', website: 'arne.com', city: 'Amsterdam' }).then(console.log)```
 
 
 
 delete designer
-axios.delete('/designer/6').then(console.log)
+`axios.delete('/designer/6').then(console.log)`
 
 
 add skill
-axios.post('/skill', { name: 'Web Design'}).then(console.log)
+`axios.post('/skill', { name: 'Web Design'}).then(console.log)`
 
 
 
 add skill to designer
-axios.post('/designer/5dd29b5ebfd250191a6d9c98/skills', { skill: '5dd2bcf12a232e2612439867' }).then(console.log)
+`axios.post('/designer/5dd29b5ebfd250191a6d9c98/skills', { skill: '5dd2bcf12a232e2612439867' }).then(console.log)`
 
   webDesign,
   typography,
@@ -39,11 +39,11 @@ axios.post('/designer/5dd29b5ebfd250191a6d9c98/skills', { skill: '5dd2bcf12a232e
 
 
 add location
-axios.post('/location', { name: 'Berlin'}).then(console.log)
+`axios.post('/location', { name: 'Berlin'}).then(console.log)`
 
   
 add location to designer
-axios.post('/designer/5dd2e4522dd94d3e806d3d6f/location', { location: '5dd2a528bcbc5a2088c5dd44' }).then(console.log)
+`axios.post('/designer/5dd2e4522dd94d3e806d3d6f/location', { location: '5dd2a528bcbc5a2088c5dd44' }).then(console.log)`
 ​
 
 
