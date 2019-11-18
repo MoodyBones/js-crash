@@ -5,7 +5,7 @@ const SkillSchema = new mongoose.Schema({
   designers: [
     {
       type: mongoose.SchemaTypes.ObjectId,
-      ref: 'Designers',
+      ref: 'Designer',
       autopopulate: {
         maxDepth: 1
       }
@@ -18,7 +18,6 @@ SkillSchema.plugin(require('mongoose-autopopulate'))
 const SkillModel = mongoose.model('Skill', SkillSchema)
 
 module.exports = SkillModel
-
 
 // const Chalk = require('chalk')
 

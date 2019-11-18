@@ -27,8 +27,8 @@ router.delete('/:id', async (req, res) => {
 
 router.post('/:id/skills', async (req, res) => {
   const user = await DesignerService.find(req.params.id)
-  const skill = await SkillService.find(req.body.meetup)
-  await DesignerService.attendMeetup(user, skill)
+  const skill = await SkillService.find(req.body.skill)
+  await DesignerService.addSkill(user, skill)
 
   res.send(user)
 })

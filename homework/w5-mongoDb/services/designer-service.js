@@ -6,9 +6,9 @@ class DesignerService extends BaseService {
 
   async addSkill(designer, skill) {
     designer.skills.push(skill)
-    skill.designers.push(designer)
-    await this.save()
-    await skill.save()
+    // skill.designer.push(designer)
+    await designer.save()
+    // await skill.save()
   }
 }
 

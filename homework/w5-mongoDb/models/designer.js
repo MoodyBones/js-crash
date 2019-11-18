@@ -25,21 +25,13 @@ const DesignerSchema = new mongoose.Schema({
   skills: [
     {
       type: mongoose.SchemaTypes.ObjectId,
-      ref: 'Skills',
+      ref: 'Skill',
       autopopulate: {
         maxDepth: 1
       }
     }
   ]
 })
-
-// DesignerSchema.methods.findPeersOver18 = function(cb) {
-//   return DesignerModel.find({
-//     age: {
-//       $gte: 18
-//     }
-//   })
-// }
 
 DesignerSchema.plugin(require('mongoose-autopopulate'))
 

@@ -18,13 +18,6 @@ const CustomerSchema = new mongoose.Schema({
   }
 })
 
-// CustomerSchema.methods.findPeersOver18 = function(cb) {
-//   return CustomerModel.find({
-//     age: {
-//       $gte: 18
-//     }
-//   })
-// }
 
 CustomerSchema.plugin(require('mongoose-autopopulate'))
 
