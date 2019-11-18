@@ -37,7 +37,15 @@ axios.post('/designer/5dd29b5ebfd250191a6d9c98/skills', { skill: '5dd2bcf12a232e
   UXDesign,
   animation,
 
+
+add location
+axios.post('/location', { name: 'Berlin'}).then(console.log)
+
   
+add location to designer
+axios.post('/designer/5dd2e4522dd94d3e806d3d6f/location', { location: '5dd2a528bcbc5a2088c5dd44' }).then(console.log)
+​
+
 
 
 

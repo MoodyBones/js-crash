@@ -3,6 +3,9 @@ const express = require('express')
 const router = express.Router()
 
 const DesignerService = require('../services/designer-service')
+const SkillService = require('../services/skill-service')
+const LocationService = require('../services/location-service')
+const SearchService = require('../services/location-service')
 
 router.get('/all', async (req, res) => {
   const people = await DesignerService.findAll()
@@ -24,10 +27,19 @@ router.delete('/:id', async (req, res) => {
   res.send(user)
 })
 
-// router.get("/:id/peers-over-18", async (req, res) => {
-//   const user = await DesignerService.find(req.params.id)
-//   const peers = await user.findPeersOver18()
-//   res.send(peers)
-// })
+router.post('/:id/skills', async (req, res) => {
+  const user = await DesignerService.find(req.params.id)
+  const skill = await SkillService.find(req.body.skill)
+  await DesignerService.getSkills(user, skill)
+  res.send(user)
+})
+
+router.post('/:id/location', async (req, res) => {
+  const user = await DesignerService.find(req.params.id)
+  const location = await LocationService.find(req.body.location)
+  await DesignerService.getLocations(user, location)
+  res.send(user)
+})
+
 
 module.exports = router

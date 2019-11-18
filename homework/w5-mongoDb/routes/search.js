@@ -27,18 +27,5 @@ router.delete('/:id', async (req, res) => {
   res.send(user)
 })
 
-router.post('/:id/skills', async (req, res) => {
-  const user = await DesignerService.find(req.params.id)
-  const skill = await SkillService.find(req.body.skill)
-  await SearchService.getSkills(user, skill)
-  res.send(user)
-})
-
-router.post('/:id/location', async (req, res) => {
-  const user = await DesignerService.find(req.params.id)
-  const location = await LocationService.find(req.body.location)
-  await SearchService.getLocations(user, location)
-  res.send(user)
-})
 
 module.exports = router

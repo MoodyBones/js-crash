@@ -18,13 +18,24 @@ const DesignerSchema = new mongoose.Schema({
     unique: true,
     required: true
   },
-  location: {
-    type: String,
-    required: true
-  },
-  skills: {
-    type: String
-  }
+  location: [
+    {
+      type: mongoose.SchemaTypes.ObjectId,
+      ref: 'Location',
+      autopopulate: {
+        maxDepth: 1
+      }
+    }
+  ],
+  skills: [
+    {
+      type: mongoose.SchemaTypes.ObjectId,
+      ref: 'Skill',
+      autopopulate: {
+        maxDepth: 1
+      }
+    }
+  ]
 })
 
 DesignerSchema.plugin(require('mongoose-autopopulate'))
