@@ -13,7 +13,8 @@ axios.post('/designer', { name: 'Rosa Jones', email: 'rosa@email.com', website: 
 
 axios.post('/designer', { name: 'Conor', email: 'conor@gmail.com', website: 'conor.com', city: 'Berlin' }).then(console.log)
 
-axios.post('/designer', { name: 'Arne', email: 'arne@gmail.com', website: 'arne.com', city: 'Amsterdam' }).then(console.log)```
+axios.post('/designer', { name: 'Arne', email: 'arne@gmail.com', website: 'arne.com', city: 'Amsterdam' }).then(console.log)
+```
 
 
 
