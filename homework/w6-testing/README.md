@@ -1,15 +1,3 @@
-Hey all, I got a little confused this week. I've been trying to build more complex logic, but yeh na, nothing I tried worked.
-
-I thought to make a search service, that could list the designers by location or skills. I tried implementing a search model/service/route to handle those requests, but couldn't get the routing right. so I moved the methods back to the designer service :/  
-
-Also I plan to change my customer model to be user. and yeah like I said above, the user should be able to request the designers by location or skill. 
-
-My goal is to eventually incorporate a map that will show the density of female designers around the world. I would like it if you can click through that, and pull up lists by location and skill, and from there click through to the designers websites :)  
-
-thanks for listening, any advice/resources are much appreciated. here is the code the I managed to get working so far...  
-
-See you Tuesday! <3   
-
 # Untitled Designer Database
 Currently under development.
 
@@ -71,7 +59,7 @@ open [localhost:3000](http://localhost:3000/)
 
 
 
-### [TO DO]
+#### IDEAS/TO DO..
 Designer
   - can submit a request to be added to the inventory
   - name, seperate first and last names
@@ -132,7 +120,7 @@ Applicaton utilizes axios. To run interactions copy & paste into browser.
 
 
 ### Reference links:
-- [Welcome guide](https://github.com/WTMBerlin/jscc-welcomeguide) for JS Crashcourse
+- [Welcome guide](https://github.com/WTMBerlin/jscc-welcomeguide) for JavaScript Crash Course
 - [WTM Berlin](http://wtmberlin.com/)
 
 
@@ -142,3 +130,6 @@ A big thanks to all the Teacher & Assistants that gave up their evenings to teac
 Thanks to my classmates for being so great and inspiring!
 Thanks to Wayfair for the venue and the food!
 THANKS WTM BERLIN!!! <3 <3 <3
+
+<br>
+Any advice/suggestions are most welcome!
