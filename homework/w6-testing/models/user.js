@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const CustomerSchema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -18,14 +18,13 @@ const CustomerSchema = new mongoose.Schema({
   }
 })
 
+UserSchema.plugin(require('mongoose-autopopulate'))
 
-CustomerSchema.plugin(require('mongoose-autopopulate'))
+const UserModel = mongoose.model('User', UserSchema)
 
-const CustomerModel = mongoose.model('Customer', CustomerSchema)
+module.exports = UserModel
 
-module.exports = CustomerModel
-
-// module.exports = class Customer {
+// module.exports = class User {
 //   constructor(name, email, inquiries = [], requests = [], id) {
 //     this.name = name
 //     this.email = email
@@ -46,11 +45,11 @@ module.exports = CustomerModel
 
 //     this.requests.push(skill.name, [designer.name, designer.email])
 //     designer.requests.push(skill.name, [this.name, this.email])
-//     // console.log('customer', this.requests) // testing
+//     // console.log('user', this.requests) // testing
 //     // console.log('designer', designer.requests) // testing
 //   }
 
 //   static create({ name, email, inquiries, requests, id }) {
-//     return new Customer(name, email, inquiries, requests, id)
+//     return new User(name, email, inquiries, requests, id)
 //   }
 // }

@@ -5,7 +5,7 @@ const path = require('path')
 const designerRouter = require('./routes/designer')
 const skillRouter = require('./routes/skill')
 const locationRouter = require('./routes/location')
-const customerRouter = require('./routes/customer')
+const userRouter = require('./routes/user')
 const searchRouter = require('./routes/search')
 
 require('./mongo-connection')
@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/designer', designerRouter)
 app.use('/skill', skillRouter)
 app.use('/location', locationRouter)
-app.use('/customer', customerRouter)
+app.use('/user', userRouter)
 app.use('/search', searchRouter)
 
 app.get('/', (req, res) => {
