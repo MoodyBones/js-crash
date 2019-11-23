@@ -13,15 +13,16 @@ See you Tuesday! <3
 # Untitled Designer Database
 Currently under development.
 
-### Project title: 
-Untitled Designer Database
-### Created by: 
-Mel Jones
-### Description:
+### Created by Mel Jones
 
+### Description:
+- An Inventory of Female Designers.
+- My goal is to incorporate a clickable map that will show the density of female designers around the world. 
+- I would like it if you can click through the map, and pull up lists by location and skill, and from there click through to the designers websites :)  
 
 ### Objective:
-- Learn backend JavaScript. 
+- Create a nodejs/express/mongoDb App.
+- Learn a bit about backend JavaScript. 
 - This project is created alongside & with thanks to [WTM JS Crash Course](https://github.com/WTMBerlin/jscc2019).
 
 ### Technologies:
@@ -32,7 +33,7 @@ nodejs expressjs mongoDb mongoose pug ava
 
 `$ nodemon index.js`
 
-make sure mongo is running `$ brew services start mongodb-community`
+make sure mongoDb is running `$ brew services start mongodb-community`
 
 open [localhost:3000](http://localhost:3000/)
 
@@ -101,12 +102,12 @@ Applicaton utilizes axios. To run interactions copy & paste into browser.
 #### Designer
 - `http://localhost:3000/designer/all`
 - add new designer
-  - axios.post('/designer', { name: 'Mel', email: 'mel@gmail.com', website: 'meljones.me', city: 'Berlin' }).then(console.log)
-  - axios.post('/designer', { name: 'Sally', email: 'sallysweet@email.com', website: 'sally.sweet', city: 'Lisbon' }).then(console.log)`
-  - axios.post('/designer', { name: 'Farrah Lee', email: 'farrah@email.com', website: 'farrahlee.com', city: 'Berlin' }).then(console.log)
-  - axios.post('/designer', { name: 'Rosa Jones', email: 'rosa@email.com', website: 'rosa.design', city: 'Amsterdam' }).then(console.log)
-  - axios.post('/designer', { name: 'Conor', email: 'conor@gmail.com', website: 'conor.com', city: 'Berlin' }).then(console.log)
-  - axios.post('/designer', { name: 'Arne', email: 'arne@gmail.com', website: 'arne.com', city: 'Amsterdam' }).then(console.log)
+  - `axios.post('/designer', { name: 'Mel', email: 'mel@gmail.com', website: 'meljones.me', city: 'Berlin' }).then(console.log)`
+  - `axios.post('/designer', { name: 'Sally', email: 'sallysweet@email.com', website: 'sally.sweet', city: 'Lisbon' }).then(console.log)`
+  - `axios.post('/designer', { name: 'Farrah Lee', email: 'farrah@email.com', website: 'farrahlee.com', city: 'Berlin' }).then(console.log)`
+  - `axios.post('/designer', { name: 'Rosa Jones', email: 'rosa@email.com', website: 'rosa.design', city: 'Amsterdam' }).then(console.log)`
+  - `axios.post('/designer', { name: 'Conor', email: 'conor@gmail.com', website: 'conor.com', city: 'Berlin' }).then(console.log)`
+  - `axios.post('/designer', { name: 'Arne', email: 'arne@gmail.com', website: 'arne.com', city: 'Amsterdam' }).then(console.log)`
 
 - delete designer
   - `axios.delete('/designer/6').then(console.log)`
