@@ -1,0 +1,31 @@
+html
+  head
+    title Untitled Designer Database
+    script(src="https://unpkg.com/axios/dist/axios.min.js")
+    link(href="https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap" rel="stylesheet")
+    link(rel="stylesheet", href="/css/style.css")
+
+    script.
+        console.log('hello there 👋')
+
+  body
+    div(class='app-container')
+      nav 
+        ul
+          li 
+            a(href="../") HOME
+          li 
+            a(href="/designer/all") DESIGNERS
+          li 
+            a(href="/skill/all") SKILLS
+          li 
+            a(href="/location/all") LOCATION 
+          li 
+            a(href="/customer/all") CUSTOMERS
+      header
+        h1 Untitled <br>Designer <br>Database
+      main
+        block content
+      footer
+        p Made by 
+          a(href="https://twitter.com/_moodybones") Mel Jones
