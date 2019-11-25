@@ -1,9 +1,11 @@
 const mongoose = require('mongoose')
 
-const SearchSchema = new mongoose.Schema({
+const { Schema, SchemaTypes, model } = mongoose
+
+const SearchSchema = new Schema({
   location: [
     {
-      type: mongoose.SchemaTypes.ObjectId,
+      type: SchemaTypes.ObjectId,
       ref: 'Skill',
       autopopulate: {
         maxDepth: 1
@@ -12,7 +14,7 @@ const SearchSchema = new mongoose.Schema({
   ],
   skills: [
     {
-      type: mongoose.SchemaTypes.ObjectId,
+      type: SchemaTypes.ObjectId,
       ref: 'Skill',
       autopopulate: {
         maxDepth: 1
@@ -23,6 +25,6 @@ const SearchSchema = new mongoose.Schema({
 
 SearchSchema.plugin(require('mongoose-autopopulate'))
 
-const SearchModel = mongoose.model('Search', SearchSchema)
+const SearchModel = model('Search', SearchSchema)
 
 module.exports = SearchModel

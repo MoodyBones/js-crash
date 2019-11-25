@@ -1,10 +1,12 @@
 const mongoose = require('mongoose')
 
-const LocationSchema = new mongoose.Schema({
+const { Schema, SchemaTypes, model } = mongoose
+
+const LocationSchema = new Schema({
   name: String,
   designers: [
     {
-      type: mongoose.SchemaTypes.ObjectId,
+      type: SchemaTypes.ObjectId,
       ref: 'Designer',
       autopopulate: {
         maxDepth: 1
@@ -15,6 +17,6 @@ const LocationSchema = new mongoose.Schema({
 
 LocationSchema.plugin(require('mongoose-autopopulate'))
 
-const LocationModel = mongoose.model('Location', LocationSchema)
+const LocationModel = model('Location', LocationSchema)
 
 module.exports = LocationModel

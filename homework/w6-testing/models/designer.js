@@ -1,6 +1,8 @@
 const mongoose = require('mongoose')
 
-const DesignerSchema = new mongoose.Schema({
+const { Schema, SchemaTypes, model } = mongoose
+
+const DesignerSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -20,7 +22,7 @@ const DesignerSchema = new mongoose.Schema({
   },
   location: [
     {
-      type: mongoose.SchemaTypes.ObjectId,
+      type: SchemaTypes.ObjectId,
       ref: 'Location',
       autopopulate: {
         maxDepth: 1
@@ -29,7 +31,7 @@ const DesignerSchema = new mongoose.Schema({
   ],
   skills: [
     {
-      type: mongoose.SchemaTypes.ObjectId,
+      type: SchemaTypes.ObjectId,
       ref: 'Skill',
       autopopulate: {
         maxDepth: 1
@@ -40,7 +42,7 @@ const DesignerSchema = new mongoose.Schema({
 
 DesignerSchema.plugin(require('mongoose-autopopulate'))
 
-const DesignerModel = mongoose.model('Designer', DesignerSchema)
+const DesignerModel = model('Designer', DesignerSchema)
 
 module.exports = DesignerModel
 
