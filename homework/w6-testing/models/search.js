@@ -1,30 +1,32 @@
-const mongoose = require('mongoose')
+// not in use
 
-const { Schema, SchemaTypes, model } = mongoose
+// const mongoose = require('mongoose')
 
-const SearchSchema = new Schema({
-  location: [
-    {
-      type: SchemaTypes.ObjectId,
-      ref: 'Skill',
-      autopopulate: {
-        maxDepth: 1
-      }
-    }
-  ],
-  skills: [
-    {
-      type: SchemaTypes.ObjectId,
-      ref: 'Skill',
-      autopopulate: {
-        maxDepth: 1
-      }
-    }
-  ]
-})
+// const { Schema, SchemaTypes, model } = mongoose
 
-SearchSchema.plugin(require('mongoose-autopopulate'))
+// const SearchSchema = new Schema({
+//   location: [
+//     {
+//       type: SchemaTypes.ObjectId,
+//       ref: 'Skill',
+//       autopopulate: {
+//         maxDepth: 1
+//       }
+//     }
+//   ],
+//   skills: [
+//     {
+//       type: SchemaTypes.ObjectId,
+//       ref: 'Skill',
+//       autopopulate: {
+//         maxDepth: 1
+//       }
+//     }
+//   ]
+// })
 
-const SearchModel = model('Search', SearchSchema)
+// SearchSchema.plugin(require('mongoose-autopopulate'))
 
-module.exports = SearchModel
+// const SearchModel = model('Search', SearchSchema)
+
+// module.exports = SearchModel

@@ -1,22 +1,24 @@
-const BaseService = require('./base-service')
-const SearchModel = require('../models/search')
+// not in use
 
-class SearchService extends BaseService {
-  model = SearchModel
+// const BaseService = require('./base-service')
+// const SearchModel = require('../models/search')
 
-  // async getSkills(designer, skill) {
-  //   designer.skills.push(skill)
-  //   skill.designers.push(designer)
-  //   await designer.save()
-  //   await skill.save()
-  // }
+// class SearchService extends BaseService {
+//   model = SearchModel
 
-  // async getLocations(designer, location) {
-  //   designer.location.push(location)
-  //   location.designers.push(designer)
-  //   await designer.save()
-  //   await location.save()
-  // }
-}
+//   // async getSkills(designer, skill) {
+//   //   designer.skills.push(skill)
+//   //   skill.designers.push(designer)
+//   //   await designer.save()
+//   //   await skill.save()
+//   // }
 
-module.exports = new SearchService()
+//   // async getLocations(designer, location) {
+//   //   designer.location.push(location)
+//   //   location.designers.push(designer)
+//   //   await designer.save()
+//   //   await location.save()
+//   // }
+// }
+
+// module.exports = new SearchService()

@@ -1,31 +1,32 @@
-const express = require('express')
+// not in use
 
-const router = express.Router()
+// const express = require('express')
 
-const SearchService = require('../services/search-service')
-const DesignerService = require('../services/designer-service')
-const SkillService = require('../services/skill-service')
-const LocationService = require('../services/location-service')
+// const router = express.Router()
 
-router.get('/all', async (req, res) => {
-  const people = await SearchService.findAll()
-  res.render('list', { items: people })
-})
+// const SearchService = require('../services/search-service')
+// const DesignerService = require('../services/designer-service')
+// const SkillService = require('../services/skill-service')
+// const LocationService = require('../services/location-service')
 
-router.get('/:id', async (req, res) => {
-  const user = await SearchService.find(req.params.id)
-  res.render('data', { data: user })
-})
+// router.get('/all', async (req, res) => {
+//   const people = await SearchService.findAll()
+//   res.render('list', { items: people })
+// })
 
-router.post('/', async (req, res) => {
-  const user = await SearchService.add(req.body)
-  res.send(user)
-})
+// router.get('/:id', async (req, res) => {
+//   const user = await SearchService.find(req.params.id)
+//   res.render('data', { data: user })
+// })
 
-router.delete('/:id', async (req, res) => {
-  const user = await SearchService.del(req.params.id)
-  res.send(user)
-})
+// router.post('/', async (req, res) => {
+//   const user = await SearchService.add(req.body)
+//   res.send(user)
+// })
 
+// router.delete('/:id', async (req, res) => {
+//   const user = await SearchService.del(req.params.id)
+//   res.send(user)
+// })
 
-module.exports = router
+// module.exports = router
