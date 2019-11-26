@@ -1,10 +1,11 @@
+/* eslint-disable class-methods-use-this */
 const BaseService = require('./base-service')
 const DesignerModel = require('../models/designer')
 
 class DesignerService extends BaseService {
   model = DesignerModel
 
-  async setSkills(designer, skill) {
+  async addSkills(designer, skill) {
     designer.skills.push(skill)
     skill.designers.push(designer)
     await designer.save()

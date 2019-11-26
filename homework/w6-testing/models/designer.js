@@ -4,21 +4,23 @@ const validator = require('validator')
 const { Schema, SchemaTypes, model } = mongoose
 
 const DesignerSchema = new Schema({
-  firstName: {
-    type: String,
-    required: true,
-    minlength: 2
-  },
-  lastName: {
-    type: String,
-    required: true,
-    minlength: 2
+  name: {
+    firstName: {
+      type: String,
+      required: true,
+      minlength: 2
+    },
+    lastName: {
+      type: String,
+      required: true,
+      minlength: 2
+    }
   },
   email: {
     type: String,
     lowercase: true,
     required: true,
-    validate: (value) => {
+    validate: value => {
       return validator.isEmail(value)
     }
   },
@@ -49,16 +51,16 @@ const DesignerSchema = new Schema({
 })
 
 DesignerSchema.virtual('fullName').get(function() {
-  return `${this.firstName} ${this.lastName}`
+  return `${this.name.firstName} ${this.name.lastName}`
 })
 
 DesignerSchema.virtual('fullName').set(function(name) {
   const str = name.split(' ')
 
   // eslint-disable-next-line prefer-destructuring
-  this.firstName = str[0]
+  this.name.firstName = str[0]
   // eslint-disable-next-line prefer-destructuring
-  this.lastName = str[1]
+  this.name.lastName = str[1]
 })
 
 DesignerSchema.plugin(require('mongoose-autopopulate'))

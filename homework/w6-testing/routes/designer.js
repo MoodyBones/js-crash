@@ -30,14 +30,14 @@ router.delete('/:id', async (req, res) => {
 router.post('/:id/skills', async (req, res) => {
   const user = await DesignerService.find(req.params.id)
   const skill = await SkillService.find(req.body.skill)
-  await DesignerService.getSkills(user, skill)
+  await DesignerService.addSkills(user, skill)
   res.send(user)
 })
 
 router.post('/:id/location', async (req, res) => {
   const user = await DesignerService.find(req.params.id)
   const location = await LocationService.find(req.body.location)
-  await DesignerService.getLocations(user, location)
+  await DesignerService.setLocations(user, location)
   res.send(user)
 })
 
