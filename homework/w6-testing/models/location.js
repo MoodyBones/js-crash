@@ -15,6 +15,13 @@ const LocationSchema = new Schema({
   ]
 })
 
+// crashes app :(
+// LocationSchema.methods.findDesignersByLocation = function(location) {
+//   return LocationModel.select({
+//     $gte: location
+//   })
+// }
+
 LocationSchema.plugin(require('mongoose-autopopulate'))
 
 const LocationModel = model('Location', LocationSchema)

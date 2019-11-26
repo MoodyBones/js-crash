@@ -24,4 +24,11 @@ router.delete('/:id', async (req, res) => {
   res.send(location)
 })
 
+// crashes app
+// router.get('/:id/designers-by-location', async (req, res) => {
+//   const location = await LocationService.find(req.params.id)
+//   const designers = await location.findDesignersByLocation(location)
+//   res.send(designers)
+// })
+
 module.exports = router
