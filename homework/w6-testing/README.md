@@ -35,12 +35,16 @@ open [localhost:3000](http://localhost:3000/)
 #### Designer
 
 - add new Designer
-  - name: String
+  - name:
+    - firstName
+    - LastName
   - location: String
   - email: String
+    -with validation
   - website: String
   - skills: Array
   - description: String
+- added fullName method
 - [TO DO] submit a request to be added to inventory
 
 #### Skill
@@ -67,11 +71,11 @@ open [localhost:3000](http://localhost:3000/)
 Designer
 
 - can submit a request to be added to the inventory
-- name, seperate first and last names
+- [DONE] name, seperate first and last names
 - location, seperate city & country
   User
-- can view Designers by City
-- can view Designers by Country
+- [DEVELOPING]can view Designers by Location
+- can view Designers by City/Country
 - can view Designers by Skill
 - can view Designers Alphabetically
 - can view Designers Randomly (home & on refresh)
@@ -123,6 +127,16 @@ Applicaton utilizes axios. To run interactions copy & paste into browser.
 
 - add location
   - `axios.post('/location', { name: 'Berlin'}).then(console.log)`
+
+
+#### User
+- add new User 
+  - `axios.post('/user', { fullName: 'Arne Lucas', email: 'zacmee@hotmail.com' }).then(console.log)`
+
+- delete User
+
+  - `axios.delete('/user/6').then(console.log)`
+
 
 ### Reference links:
 
