@@ -50,6 +50,8 @@ const DesignerSchema = new Schema({
   ]
 })
 
+
+
 DesignerSchema.virtual('fullName').get(function() {
   return `${this.name.firstName} ${this.name.lastName}`
 })
