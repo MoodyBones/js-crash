@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "ava --watch --verbose"
+    "test": "ava --watch --verbose",
+    "test-coverage": "nyc ava --verbose"
   },
   "author": "Mel Jones",
   "license": "MIT",
