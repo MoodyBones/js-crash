@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const validator = require('validator')
 
 const { Schema, model } = mongoose
 
@@ -11,8 +12,10 @@ const UserSchema = new Schema({
   email: {
     type: String,
     lowercase: true,
-    unique: true,
-    required: true
+    required: true,
+    validate: value => {
+      return validator.isEmail(value)
+    }
   },
   city: {
     type: String,

@@ -1,9 +1,15 @@
 const mongoose = require('mongoose')
+const validator = require('validator')
 
 const { Schema, SchemaTypes, model } = mongoose
 
 const DesignerSchema = new Schema({
-  name: {
+  firstName: {
+    type: String,
+    required: true,
+    minlength: 2
+  },
+  lastName: {
     type: String,
     required: true,
     minlength: 2
@@ -11,8 +17,10 @@ const DesignerSchema = new Schema({
   email: {
     type: String,
     lowercase: true,
-    unique: true,
-    required: true
+    required: true,
+    validate: (value) => {
+      return validator.isEmail(value)
+    }
   },
   website: {
     type: String,
@@ -38,6 +46,19 @@ const DesignerSchema = new Schema({
       }
     }
   ]
+})
+
+DesignerSchema.virtual('fullName').get(function() {
+  return `${this.firstName} ${this.lastName}`
+})
+
+DesignerSchema.virtual('fullName').set(function(name) {
+  const str = name.split(' ')
+
+  // eslint-disable-next-line prefer-destructuring
+  this.firstName = str[0]
+  // eslint-disable-next-line prefer-destructuring
+  this.lastName = str[1]
 })
 
 DesignerSchema.plugin(require('mongoose-autopopulate'))
