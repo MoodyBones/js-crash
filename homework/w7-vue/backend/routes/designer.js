@@ -8,13 +8,25 @@ const LocationService = require('../services/location-service')
 
 router.get('/all', async (req, res) => {
   try {
-    const users = await DesignerService.findAll()
-    res.render('list', { items: users })
+    const designers = await DesignerService.findAll()
+    res.render('list', { items: designers })
   } catch (err) {
     console.error(err.message)
     res.status(404).send(`Server error: ${err.message}`)
   }
 })
+
+// to connect with frontend
+router.get('/all/json', async (req, res) => {
+  try {
+    const designers= await DesignerService.findAll()
+    res.send(designers)
+  } catch (err) {
+    console.error(err.message)
+    res.status(404).send(`Server error: ${err.message}`)
+  }
+})
+
 
 router.get('/:id', async (req, res) => {
   const { id } = req.params
