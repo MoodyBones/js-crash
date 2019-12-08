@@ -1,18 +1,18 @@
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import DesignerCard from '@/components/designer-card.vue'
 import { mapState, mapActions } from 'vuex' // this helps us to read from /store
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    DesignerCard
   },
   computed: {
-    ...mapState(['counter'])
+    ...mapState(['designers', 'counter'])
   },
   methods: {
-    ...mapActions(['fetchDesigners'])
+    ...mapActions(['fetchDesigners', 'incrementCounter'])
   },
   created() {
     this.fetchDesigners()
@@ -20,12 +20,10 @@ export default {
 }
 </script>
 
-
-
-<template lang='pug'>
+<template lang="pug">
   main
-    h2 Hello World
+    button(@click="incrementCounter") Increment 
     div {{ counter }}
+    h2 Hello World
+    designer-card(v-for="designer in designers", :designer="designer")
 </template>
-
-
