@@ -1,22 +1,28 @@
 <script>
 export default {
   name: 'DesignerCard',
-  props: ['designer']
+  props: ['designer'],
+  computed: {
+    designerUrl() {
+      return `/designer/${this.designer._id}`
+    }
+  }
 }
 </script>
 
 <template lang="pug">
-  article.container
-    h3.name {{ designer.name }} 
-    div.website {{ designer.website }}
+  article.card
+    h2.card-title
+      router-link(:to="designerUrl") {{ designer.name }} 
+    span {{ designer.website }}
 </template>
 
 <style scoped>
-.container {
+.card {
   border-bottom: 1px solid grey;
   text-align: left;
 }
-.name {
-  color: grey
+.card-title {
+  color: grey;
 }
 </style>
