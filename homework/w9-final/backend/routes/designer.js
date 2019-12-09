@@ -94,7 +94,7 @@ router.post('/:id/skills', async (req, res) => {
     } else if (!skill) {
       res.status(404).send(`Error: Could not find SKILL for id >${id}<`)
     } else {
-      await DesignerService.addSkills(designer, skill)
+      await DesignerService.addSkill(designer, skill)
       res.send(designer)
     }
   } catch (err) {

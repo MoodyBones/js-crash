@@ -5,16 +5,9 @@ const { Schema, SchemaTypes, model } = mongoose
 
 const DesignerSchema = new Schema({
   name: {
-    firstName: {
-      type: String,
-      required: true,
-      minlength: 2
-    },
-    lastName: {
-      type: String,
-      required: true,
-      minlength: 2
-    }
+    type: String,
+    required: true,
+    minlength: 2
   },
   email: {
     type: String,
@@ -29,6 +22,9 @@ const DesignerSchema = new Schema({
     lowercase: true,
     unique: true,
     required: true
+  },
+  description: {
+    type: String
   },
   location: [
     {
@@ -48,21 +44,6 @@ const DesignerSchema = new Schema({
       }
     }
   ]
-})
-
-
-
-DesignerSchema.virtual('fullName').get(function() {
-  return `${this.name.firstName} ${this.name.lastName}`
-})
-
-DesignerSchema.virtual('fullName').set(function(name) {
-  const str = name.split(' ')
-
-  // eslint-disable-next-line prefer-destructuring
-  this.name.firstName = str[0]
-  // eslint-disable-next-line prefer-destructuring
-  this.name.lastName = str[1]
 })
 
 DesignerSchema.plugin(require('mongoose-autopopulate'))
