@@ -4,17 +4,89 @@ Currently under development.
 
 ### Created by Mel Jones
 
-## TODO
+# FRONTEND - STYLE GUIDE
 
-- designer cards
-- nav 
-- footer
-- pages
-  - HOME designers randomly
-  - designers by Location
-  - designer by Skill
-  - about
-- random colour picker 
+## !TODO first
+
+- duplicate week 7 into final folder
+- delete data
+- add new data
+
+## fonts
+
+- <link href="[https://fonts.googleapis.com/css?family=Antic+Slab|Montserrat:300,500|Raleway:300,500&display=swap](https://fonts.googleapis.com/css?family=Antic+Slab%7CMontserrat:300,500%7CRaleway:300,500&display=swap)" rel="stylesheet">
+- sans-serif-head
+    - Raleway - 300 | 500
+        - font-family: 'Raleway', sans-serif;
+- sans-serif-main
+    - Montserrat - san serif - 300 | 500
+        - font-family: 'Montserrat', sans-serif;
+- serif-main
+    - Antic Slab - serif
+        - font-family: 'Antic Slab', serif;
+- ionicons
+- 
+- Raleway - but numbers looks crap
+
+## colours
+
+[Indian palette](https://flatuicolors.com/palette/in)
+
+- lilac: rgba(214, 162, 232,1.0)
+- pink-red: rgba(252, 66, 123,1.0)
+- orang-red: rgba(253, 114, 114,1.0)
+- navy: rgba(24, 44, 97,1.0)
+- blue: rgba(59, 59, 152,1.0)
+- blue-medium: rgba(27, 156, 252,1.0)
+- yellow-light: rgba(248, 239, 186,1.0)
+- yellow-honey: rgba(234, 181, 67,1.0)
+- green: rgba(88, 177, 159,1.0)
+- grey-dark: rgba(44, 58, 71,1.0)
+- grey-med: rgba(202, 211, 200,1.0)
+- black-ish: rgba(15, 17, 8, 1.0)
+- white-ish: rgba(242, 242, 242. 1.0)
+
+## imgs
+
+- save imgs with ids
+- world pic
+
+    [](https://www.notion.so/7c97e9b312ab4cc5871d30a5a3294c23#ebab57e373d54d4cb9079d558229792d)
+
+- women & man on couch with laptop
+
+    [](https://www.notion.so/7c97e9b312ab4cc5871d30a5a3294c23#c486bd31cfc94d1a91fd97eef9926721)
+
+- 
+
+## animate
+
+- links - see
+- underline or border
+- on hover
+
+## layout
+
+- nav - white
+- header - blue/navy & white like Matisse and [Lorraine Sorlet](https://www.instagram.com/p/B50avAootN0/)
+- designers cards - card layout like [increment](https://increment.com/) cards -  grey bg
+- skills cards - coloured by skill -  white bg
+- City cards - with map - bring coloured bg
+- sign up form- see Broadband Website
+- About/ contact me
+- footer - dark grey
+
+## Spaciing
+
+- can use variable
+    - —spacing: 10px
+- padding between links and underline - are there new css features to do this?
+    - maybe check out Jonas Schedtmann or CSS Tricks
+- lots of white space - except for headings
+
+## extra cool stuff
+
+- bottom sticky nav - see [broadband](https://clairelevans.com/) - also for mobile, think like PWA/native app
 
 ### Description:
 
