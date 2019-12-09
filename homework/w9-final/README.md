@@ -8,7 +8,7 @@ Currently under development.
 
 ## routes/models/services
 
-- location
+- location DONE
 - skill
 - designer
 - plus base service
@@ -32,23 +32,88 @@ Currently under development.
 - add json DONE
 - add try catch DONE
 
-server crashes when I try [`http://localhost:3000/location/all`](http://localhost:3000/location/all)
+ [`http://localhost:3000/location/all`](http://localhost:3000/location/all) test ok
 
-something about list.pug. Do I still need that or can I delete it. What does the error mean?
-
-but [`http://localhost:3000/location/all/json`](http://localhost:3000/location/all/json) works fine and
-
-I can see the data if I use axios on `[http://localhost:3000/](http://localhost:3000/)`
-
+[`http://localhost:3000/location/all/json`](http://localhost:3000/location/all/json) test ok
+```
     // add
     axios.post('/location', { name: 'Berlin', country: 'Germany'}).then(console.log)
     
     //delete
     axios.delete('/location/6').then(console.log)
-    
+```    
 
 - add new locations with Country DONE
 - delete old locations DONE
+
+## Skill
+
+### Model
+
+- name: String,
+- designers: [],
+- color: String,
+    - should i add colour here or on the front? yes add to backend
+        - see [codepen](https://stackoverflow.com/questions/47322875/vue-js-dynamic-style-with-variables)
+        - & [stack overflow](https://codepen.io/mickeymullin/pen/bKVWzg)
+
+### Service
+
+- ok i think, but designer services needs to be update to get color
+
+### Routes
+
+- add json DONE
+- add try catch DONE
+- add new skills with color code
+- delete old skills
+```
+    // add
+    
+    axios.post('/skill', { name: 'Animation', color: '#FC427B'}).then(console.log)
+    axios.post('/skill', { name: 'Branding', color: '#82589F'}).then(console.log)
+    axios.post('/skill', { name: 'Illustration', color: '#D6A2E8'}).then(console.log)
+    axios.post('/skill', { name: 'Mobile', color: '#1B9CFC'}).then(console.log)
+    axios.post('/skill', { name: 'Print', color: '#EAB543'}).then(console.log)
+    axios.post('/skill', { name: 'Product Design', color: '#58B19F'}).then(console.log)
+    axios.post('/skill', { name: 'Typography', color: '#3B3B98'}).then(console.log)
+    axios.post('/skill', { name: 'Web Design', color: '#FD7272'}).then(console.log)
+    
+    
+    //delete
+    axios.delete('/skill/6').then(console.log)
+```    
+```
+animation - saquatch socks #FC427B
+
+branding - highlighter lavender #82589F
+
+Illustration - bright ube - #D6A2E8
+
+mobile - clear chill - #1B9CFC
+
+print - honey glow - #EAB543
+
+product design - green - keppel - #58B19F
+
+typography - bluebell - #3B3B98
+
+web design - georgia peach - #FD7272
+```
+
+
+clean up designer datatbase
+
+- add new designer data
+- delete old designer data
+
+## Misc Questions
+
+- in designer Service, can I make
+    - /:id/skills/json
+    - /:id/location/json
+    - wait why did I want to do this?
+- what is the best way to assign colors???
 
 # FRONTEND - STYLE GUIDE
 
