@@ -4,6 +4,52 @@ Currently under development.
 
 ### Created by Mel Jones
 
+# Backend TODO
+
+## routes/models/services
+
+- location
+- skill
+- designer
+- plus base service
+- delete all others
+- THEN UPDATE app.js
+
+## Location
+
+### Model
+
+- name: String, DONE
+- country: String, DONE
+- designers: [] DONE
+
+### Service
+
+- ok I think, but you need to update Designer services to include country save!?
+
+### Routes
+
+- add json DONE
+- add try catch DONE
+
+server crashes when I try [`http://localhost:3000/location/all`](http://localhost:3000/location/all)
+
+something about list.pug. Do I still need that or can I delete it. What does the error mean?
+
+but [`http://localhost:3000/location/all/json`](http://localhost:3000/location/all/json) works fine and
+
+I can see the data if I use axios on `[http://localhost:3000/](http://localhost:3000/)`
+
+    // add
+    axios.post('/location', { name: 'Berlin', country: 'Germany'}).then(console.log)
+    
+    //delete
+    axios.delete('/location/6').then(console.log)
+    
+
+- add new locations with Country DONE
+- delete old locations DONE
+
 # FRONTEND - STYLE GUIDE
 
 ## !TODO first
@@ -209,17 +255,14 @@ Applicaton utilizes axios. To run interactions copy & paste into browser.
 
 #### Location
 
-- add location
-  - `axios.post('/location', { name: 'Berlin'}).then(console.log)`
+```
+// add
+axios.post('/location', { name: 'Berlin', country: 'Germany'}).then(console.log)
 
+// delete
+axios.delete('/location/6').then(console.log)
+```
 
-#### User
-- add new User 
-  - `axios.post('/user', { fullName: 'Arne Lucas', email: 'zacmee@hotmail.com' }).then(console.log)`
-
-- delete User
-
-  - `axios.delete('/user/6').then(console.log)`
 
 
 ### Reference links:

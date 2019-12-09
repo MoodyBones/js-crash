@@ -5,30 +5,78 @@ const router = express.Router()
 const LocationService = require('../services/location-service')
 
 router.get('/all', async (req, res) => {
-  const locations = await LocationService.findAll()
-  res.render('list', { items: locations })
+  try {
+    const locations = await LocationService.findAll()
+    res.render('list', { items: locations })
+  } catch (err) {
+    console.error(err.message)
+    res.status(404).send(`Server error: ${err.message}`)
+  }
+})
+
+router.get('/all/json', async (req, res) => {
+  try {
+    const locations = await LocationService.findAll()
+    res.send(locations)
+  } catch (err) {
+    console.error(err.message)
+    res.status(404).send(`Server error: ${err.message}`)
+  }
 })
 
 router.get('/:id', async (req, res) => {
-  const location = await LocationService.find(req.params.id)
-  res.render('data', { data: location })
+  const { id } = req.params
+  try {
+    const location = await LocationService.find(id)
+    if (!location) {
+      res.status(404).send(`Error: Could not find location for id >${id}<`)
+    } else {
+      res.render('data', { data: location })
+    }
+  } catch (err) {
+    console.error(err.message)
+    res.status(500).send(`Server error: ${err.message}`)
+  }
+})
+
+router.get('/:id/json', async (req, res) => {
+  const { id } = req.params
+  try {
+    const location = await LocationService.find(id)
+    if (!location) {
+      res.status(404).send(`Error: Could not find location for id >${id}<`)
+    } else {
+      res.send(location)
+    }
+  } catch (err) {
+    console.error(err.message)
+    res.status(500).send(`Server error: ${err.message}`)
+  }
 })
 
 router.post('/', async (req, res) => {
-  const location = await LocationService.add(req.body)
-  res.send(location)
+  try {
+    const location = await LocationService.add(req.body)
+    res.send(location)
+  } catch (err) {
+    console.error(err.message)
+    res.status(500).send(`Server error: ${err.message}`)
+  }
 })
 
 router.delete('/:id', async (req, res) => {
-  const location = await LocationService.del(req.params.id)
-  res.send(location)
+  const { id } = req.params
+  try {
+    const location = await LocationService.del(id)
+    if (!location) {
+      res.status(404).send(`Error: Could not find location for id >${id}<`)
+    } else {
+      res.send('Location deleted OK')
+    }
+  } catch (err) {
+    console.error(err.message)
+    res.status(500).send(`Server error: ${err.message}`)
+  }
 })
-
-// crashes app
-// router.get('/:id/designers-by-location', async (req, res) => {
-//   const location = await LocationService.find(req.params.id)
-//   const designers = await location.findDesignersByLocation(location)
-//   res.send(designers)
-// })
 
 module.exports = router

@@ -4,6 +4,7 @@ const { Schema, SchemaTypes, model } = mongoose
 
 const LocationSchema = new Schema({
   name: String,
+  country: String,
   designers: [
     {
       type: SchemaTypes.ObjectId,
@@ -15,12 +16,7 @@ const LocationSchema = new Schema({
   ]
 })
 
-// crashes app :(
-// LocationSchema.methods.findDesignersByLocation = function(location) {
-//   return LocationModel.select({
-//     $gte: location
-//   })
-// }
+
 
 LocationSchema.plugin(require('mongoose-autopopulate'))
 
