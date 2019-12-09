@@ -1,0 +1,32 @@
+{
+  "name": "w6-testing",
+  "version": "1.0.0",
+  "description": "Untitled Designer Database",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "ava --watch --verbose",
+    "test-coverage": "nyc ava --verbose"
+  },
+  "author": "Mel Jones",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chalk": "^2.4.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "flatted": "^2.0.1",
+    "mongoose": "^5.7.11",
+    "mongoose-autopopulate": "^0.9.1",
+    "pug": "^2.0.4",
+    "validator": "^12.1.0"
+  },
+  "devDependencies": {
+    "ava": "^2.4.0",
+    "nodemon": "^1.19.4",
+    "nyc": "^14.1.1",
+    "supertest": "^4.0.2"
+  },
+  "keywords": []
+}
