@@ -1,15 +1,22 @@
+<script>
+import HomeIcon from 'vue-ionicons/dist/md-home.vue'
+
+
+export default {
+  components: {
+    HomeIcon
+  }
+}
+</script>
+
 <template>
   <div id="app">
     <nav id="nav">
       <router-link to="/"
-        ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-          <path
-            d="M208 448V320h96v128h97.6V256H464L256 64 48 256h62.4v192z"
-          /></svg
-      ></router-link>
-      <router-link class="nav-link" to="/Designer">Designers</router-link>
-      <router-link class="nav-link" to="/Location">Location</router-link>
-      <router-link class="nav-link" to="/Skills">Skills</router-link>
+        ><span class="nav-link"><HomeIcon id='home-icon' /></span></router-link>
+      <router-link to="/Designer"><span class="nav-link">Designers</span></router-link>
+      <router-link to="/Location"><span class="nav-link">Location</span></router-link>
+      <router-link to="/About"><span class="nav-link">About</span></router-link>
     </nav>
     <router-view />
     <footer id="footer">
@@ -30,7 +37,7 @@
   --grey-med: rgba(202, 211, 200, 1);
   --lilac: rgba(214, 162, 232, 1);
   --pink-red: rgba(252, 66, 123, 1);
-  --orang-red: rgba(253, 114, 114, 1);
+  --orange-red: rgba(253, 114, 114, 1);
   --navy: rgba(24, 44, 97, 1);
   --blue: rgb(74, 90, 211);
   --blue-light: #c7ecee; /* nav link highlight */
@@ -38,6 +45,10 @@
   --yellow-light: rgba(248, 239, 186, 1);
   --yellow-honey: rgba(234, 181, 67, 1);
   --green: rgba(88, 177, 159, 1);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 #app {
@@ -55,12 +66,12 @@
   justify-content: space-around;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size:
 }
 
-#nav-link {
-  padding: var(--spacing);
-}
+/* .ion__svg {
+  font-size: 1.5rem; // messes with underline on other nav items
+} */
+
 
 a {
   box-shadow: inset 0 -0.5rem 0 0 var(--blue-light);
@@ -89,7 +100,7 @@ a:visited {
 
 #footer {
   padding: 30px 20px 40px 20px;
-  background-color: rgb(30, 30, 30);
-  color: rgb(118, 118, 118);
+  background-color: var(--grey-dark);
+  color: var(--grey-med);
 }
 </style>
