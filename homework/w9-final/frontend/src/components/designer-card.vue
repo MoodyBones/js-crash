@@ -1,6 +1,6 @@
 <script>
-import StarIcon from 'vue-ionicons/dist/ios-star-outline.vue'
 import MailIcon from 'vue-ionicons/dist/md-mail.vue'
+
 
 export default {
   name: 'DesignerCard',
@@ -11,7 +11,6 @@ export default {
     }
   },
   components: {
-    StarIcon,
     MailIcon
   }
 }
@@ -20,6 +19,7 @@ export default {
 <template lang="pug">
   article.card
     img(:src="`https://picsum.photos/300/200?random=${designer._id}`", alt="")
+    //- img(:src="`./assets/${designer._id}`", alt="")
     div.card-container
       h3.card-title
         router-link(:to="designerUrl") {{ designer.name }} 
@@ -27,7 +27,6 @@ export default {
       p.card-description {{ designer.description }}
       p.card-skills {{ designer.skills[0].name }}
     div.card-container-contact
-      StarIcon#icon
       MailIcon#icon
 </template>
 
@@ -40,6 +39,7 @@ export default {
   overflow: hidden;
   margin: 20px;
   min-width: 200px;
+  max-width: 300px;
   background-color: white;
 }
 
