@@ -22,9 +22,8 @@ export default {
 
 <template lang="pug">
   main
-    button(@click="incrementCounter") Increment 
-    div {{ counter }}
-    h1.heading-main Untitled Designer Database
+    header
+      h1.heading-main Untitled Designer Database
     designer-card(v-for="designer in designers", :designer="designer")
 </template>
 
