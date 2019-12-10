@@ -40,9 +40,10 @@ export default {
     section.skill-container
       skill-card(v-for="skill in skills", :skill="skill")
     section.location-container
+      p Locations & map to come...
     section.about-container
       div.about-div
-        span your@email.com
+        span 
       div.sign-div SIGN <br> UP
 </template>
 
@@ -71,23 +72,30 @@ img {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  padding: 30px 10px;
 }
 
 .skill-container {
+  background-color: white;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  padding: 40px 10px;
 }
 
 .location-container {
+  background-color: var(--blue);
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  color: var(--white-ish);
+    padding: 40px 10px;
 }
 
 .about-container {
+  background-color: var(--blue);
   display: flex;
-  background-color: var(--pink-red); 
+  background-color: var(--pink-red);
   padding: var(--spacing);
 }
 
@@ -96,7 +104,7 @@ img {
   background-color: white;
   padding: var(--spacing);
   border-radius: 6px;
-  color: var(--grey-med); 
+  color: var(--grey-med);
 }
 
 .sign-div {
@@ -104,9 +112,7 @@ img {
   padding: var(--spacing);
   border-radius: 6px;
   color: var(--grey-med);
-  margin-left: var(--spacing); 
+  margin-left: var(--spacing);
   text-align: center;
 }
-
-
 </style>

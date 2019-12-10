@@ -9,7 +9,9 @@ export default new Vuex.Store({
     designers: [],
     designer: {},
     skills: [],
-    skill: []
+    skill: {},
+    locations: [],
+    location: {}
   },
   mutations: {
     SET_DESIGNERS(state, data) {
