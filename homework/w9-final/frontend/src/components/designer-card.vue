@@ -1,5 +1,6 @@
 <script>
 import StarIcon from 'vue-ionicons/dist/ios-star-outline.vue'
+import MailIcon from 'vue-ionicons/dist/md-mail.vue'
 
 export default {
   name: 'DesignerCard',
@@ -10,7 +11,8 @@ export default {
     }
   },
   components: {
-    StarIcon
+    StarIcon,
+    MailIcon
   }
 }
 </script>
@@ -22,9 +24,11 @@ export default {
       h3.card-title
         router-link(:to="designerUrl") {{ designer.name }} 
       span.card-location {{ designer.location[0].name }}
-      p.card-skills {{ designer.skills[0].name }} {{ designer.skills[1].name }} {{ designer.skills[2].name }}
+      p.card-description {{ designer.description }}
+      p.card-skills {{ designer.skills[0].name }}
     div.card-container-contact
-      StarIcon.star-icon
+      StarIcon#icon
+      MailIcon#icon
 </template>
 
 <style scoped>
@@ -32,7 +36,7 @@ export default {
   display: inline-block;
   text-align: left;
   /* border: 1px solid #ddd; */
-  border-radius: 20px;
+  border-radius: 6px;
   overflow: hidden;
   margin: 20px;
   min-width: 200px;
@@ -41,6 +45,9 @@ export default {
 
 .card img {
   margin: 0;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .card-container {
@@ -54,23 +61,34 @@ export default {
 .card-location {
   font-weight: 200;
   font-size: 2.5rem;
-  font-family: var(--font-second);
+  font-family: var(--serif-main);
+}
+
+.card-description {
+  color: var(--grey-dark);
+  font-family: var(--serif-main);
+  margin: 30px 0;
 }
 
 .card-skills {
   color: var(--grey-dark);
-  font-weight: bold;
+  text-align: right;
+  text-transform: uppercase;
+  margin-bottom: 0;
 }
 
 .card-container-contact {
-  background: var(--black-ish);
+  border-top: 1px solid var(--white-ish);
+  /* background: var(--grey-dark); */
   padding: 1rem 1.5rem 0.5rem;
   text-align: center;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.star-icon {
-  color: white;
+#icon {
+  color: var(--orange-red);
   font-size: 2rem;
+  padding: var(--spacing);
 }
-
 </style>
