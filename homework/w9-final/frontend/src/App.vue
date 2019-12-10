@@ -74,18 +74,18 @@ export default {
 
 
 a {
-  box-shadow: inset 0 -0.5rem 0 0 var(--blue-light);
+  box-shadow: inset 0 -0.5rem 0 0 var(--lilac);
   transition: box-shadow 0.2s;
 }
 a.start-offset {
-  box-shadow: inset 0 -2.5rem 0 0 var(--blue-light);
+  box-shadow: inset 0 -2.5rem 0 0 var(--lilac);
 }
 a:hover {
-  box-shadow: inset 0 -0.5rem 0 0 var(--blue-light);
+  box-shadow: inset 0 -0.5rem 0 0 var(--lilac);
 }
 
 a:hover {
-  box-shadow: inset 0 -2.5rem 0 0 var(--blue-light);
+  box-shadow: inset 0 -2.5rem 0 0 var(--lilac);
 }
 
 /*other stylessss*/
@@ -100,7 +100,7 @@ a:visited {
 
 #footer {
   padding: 30px 20px 40px 20px;
-  background-color: var(--grey-dark);
+  background-color: var(--blue);
   color: var(--grey-med);
 }
 </style>
