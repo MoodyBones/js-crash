@@ -1,7 +1,6 @@
 <script>
 import HomeIcon from 'vue-ionicons/dist/md-home.vue'
 
-
 export default {
   components: {
     HomeIcon
@@ -13,9 +12,14 @@ export default {
   <div id="app">
     <nav id="nav">
       <router-link to="/"
-        ><span class="nav-link"><HomeIcon id='home-icon' /></span></router-link>
-      <router-link to="/Designer"><span class="nav-link">Designers</span></router-link>
-      <router-link to="/Location"><span class="nav-link">Location</span></router-link>
+        ><span class="nav-link"><HomeIcon id="home-icon"/></span
+      ></router-link>
+      <router-link to="/Designer"
+        ><span class="nav-link">Designers</span></router-link
+      >
+      <router-link to="/Location"
+        ><span class="nav-link">Location</span></router-link
+      >
       <router-link to="/About"><span class="nav-link">About</span></router-link>
     </nav>
     <router-view />
@@ -72,7 +76,6 @@ export default {
   font-size: 1.5rem; // messes with underline on other nav items
 } */
 
-
 a {
   box-shadow: inset 0 -0.5rem 0 0 var(--lilac);
   transition: box-shadow 0.2s;
@@ -97,10 +100,11 @@ a:visited {
   color: var(--black-ish);
 }
 
-
 #footer {
-  padding: 30px 20px 40px 20px;
-  background-color: var(--blue);
+  padding: 40px 20px 20px 20px;
+  background-color: var(--black-ish);
   color: var(--grey-med);
+  font-size: .8rem;
+  text-align: center;
 }
 </style>
