@@ -9,12 +9,12 @@ Currently under development.
 ## routes/models/services
 
 - location DONE
-- skill
-- designer
-- plus base service
-- delete all others
-- THEN UPDATE app.js
-
+- skill DONE
+- designer DONE
+- base-service DONE
+- delete all others DONE
+    - THEN UPDATE app.js DONE
+-
 ## Location
 
 ### Model
@@ -102,9 +102,48 @@ web design - georgia peach - #FD7272
 ```
 
 
+## Designer
+
+### Model
+
+- name: String,
+- email: String
+- website: String,
+- description: String,
+- location: []
+- skill: []
+
 clean up designer datatbase
 
 - add new designer data
+- 
+```
+    // add designer
+    axios.post('/designer', { name: 'Diana Stoyanova', email: 'dianaxstoyanova@gmail.com', website: 'https://dribbble.com/dianaxstoyanova', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}).then(console.log)
+    // illustration - bright ube
+    axios.post('/designer', { name: 'Eva Goncalves', email: 'evamgoncalves@gmail.com', website: 'https://www.evagoncalves.com/', description: 'Posuere lorem ipsum dolor sit amet consectetur adipiscing.'}).then(console.log)
+    // print - yellow honey
+    axios.post('/designer', { name: 'Geovanna Gonzalez', email: 'geovvvanna@gmail.com', website: 'https://geo-vanna.com/', description: 'Dolor sit amet consectetur adipiscing elit.'}).then(console.log)
+    // mobile - blue
+    axios.post('/designer', { name: 'Fira Rietveld', email: 'info@firarietveld.com', website: 'http://firarietveld.com/', description: 'Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit.'}).then(console.log)
+    // product design - green
+    axios.post('/designer', { name: 'Lorraine Sorlet', email: 'bonjour@lorrainesorlet.com', website: 'http://lorrainesorlet.com/', description: 'Aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh.'}).then(console.log)
+    // animation // bright pink
+    axios.post('/designer', { name: 'Nina Petravic', email: 'nina.petravic@gmail.com', website: 'http://www.etsy.com/shop/loserhands', description: 'Nulla facilisi nullam vehicula ipsum a arcu cursus vitae.'}).then(console.log)
+    // illustration - bright ube
+    
+    
+    // add location to designer
+    axios.post('/designer/5dee84c766fa066c2c7aa20f/location', { location: '5dee7fec9f97c56a6f7d52c4' }).then(console.log)
+    
+    // add skill to designer
+    axios.post('/designer/5dee84c766fa066c2c7aa20f/skills', { skill: '5dee790cef30ef65acdec27c' }).then(console.log)
+    
+    
+    // delete
+    axios.delete('/designer/6').then(console.log)
+```    
+
 - delete old designer data
 
 ## Misc Questions
@@ -113,8 +152,6 @@ clean up designer datatbase
     - /:id/skills/json
     - /:id/location/json
     - wait why did I want to do this?
-- what is the best way to assign colors???
-
 # FRONTEND - STYLE GUIDE
 
 ## !TODO first
