@@ -1,25 +1,27 @@
 <script>
 // @ is an alias to /src
 import DesignerCard from '@/components/designer-card.vue'
+import SkillCard from '@/components/skill-card.vue'
 import { mapState, mapActions } from 'vuex' // this helps us to read from /store
-import image from '@/assets/women-man-couch.jpg';
-
+import image from '@/assets/women-man-couch.jpg'
 
 export default {
   name: 'home',
   components: {
-    DesignerCard
+    DesignerCard,
+    SkillCard
   },
   computed: {
-    ...mapState(['designers', 'counter'])
+    ...mapState(['designers', 'skills'])
   },
   methods: {
-    ...mapActions(['fetchDesigners', 'incrementCounter'])
+    ...mapActions(['fetchDesigners', 'fetchSkills'])
   },
   created() {
     this.fetchDesigners()
+    this.fetchSkills()
   },
-  data: function () {
+  data: function() {
     return {
       image: image
     }
@@ -33,15 +35,21 @@ export default {
       h1.heading-main Untitled <br>Designer <br>Database
       //- img(:src="`https://picsum.photos/300/200?random=${designer._id}`", alt="")
       img(:src="image", alt="", width="1080", height="1013")
-    designer-card(v-for="designer in designers", :designer="designer")
+    section.designer-container
+      designer-card(v-for="designer in designers", :designer="designer")
+    section.skill-container
+      skill-card(v-for="skill in skills", :skill="skill")
+    section.location-container
+    section.about-container
+      div.about-div
+        span your@email.com
+      div.sign-div SIGN <br> UP
 </template>
-
 
 <style scoped>
 .header-container {
   background-color: var(--blue);
 }
-
 
 .heading-main {
   font-family: var(--sans-serif-head);
@@ -58,5 +66,47 @@ img {
   width: 100%;
   height: auto;
 }
+
+.designer-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.skill-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.location-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.about-container {
+  display: flex;
+  background-color: var(--pink-red); 
+  padding: var(--spacing);
+}
+
+.about-div {
+  flex: 1;
+  background-color: white;
+  padding: var(--spacing);
+  border-radius: 6px;
+  color: var(--grey-med); 
+}
+
+.sign-div {
+  background-color: var(--black-ish);
+  padding: var(--spacing);
+  border-radius: 6px;
+  color: var(--grey-med);
+  margin-left: var(--spacing); 
+  text-align: center;
+}
+
 
 </style>
